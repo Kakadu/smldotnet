@@ -14,11 +14,13 @@ local
 in
 local
    $(SML_LIB)/basis/pervasive.mlb
+   (*
    local
       open l4
    in
       structure gs_0 = SMLofNJ
    end
+   *)
    local
       clr/PATHCONV.sig
    in

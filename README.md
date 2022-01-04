@@ -12,6 +12,24 @@ Start compilation:
       Undefined structure SMLofNJ.
     compilation aborted: elaborate reported errors
 
+Trying to comment SMLofNJ from src/sources.mlb file
+
+    $ mlton src/sources.mlb
+    Error: src/sources.mlb 298.25.
+      Undefined structure Unsafe.
+    Error: src/sources.mlb 316.26.
+      Undefined structure gs_41.
+    Error: src/common/utils/Hash.sml 80.40.
+      Undefined structure Unsafe.
+    Error: src/common/utils/Hash.sml 89.40.
+      Undefined structure Unsafe.
+    Error: src/common/utils/Hash.sml 98.29.
+      Undefined structure Unsafe.
+    Error: src/front/script/ParseCommand.sml 101.48.
+      Undefined variable Substring.all.
+    Error: src/front/script/ParseCommand.sml 396.33.
+      Undefined variable Substring.all.
+    compilation aborted: elaborate reported errors
 
 
 
