@@ -1,0 +1,5279 @@
+local
+  basis l4 =
+    bas
+      (* $/basis.cm ====> *) $(SML_LIB)/basis/basis.mlb
+    end
+  basis l31 =
+    bas
+      (* $/smlnj-lib.cm ====> *) $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+    end
+  basis l622 =
+    bas
+      (* $/ml-yacc-lib.cm ====> *) $(SML_LIB)/mlyacc-lib/mlyacc-lib.mlb
+    end
+in
+local
+   $(SML_LIB)/basis/pervasive.mlb
+   local
+      open l4
+   in
+      structure gs_0 = SMLofNJ
+   end
+   local
+      clr/PATHCONV.sig
+   in
+      signature gs_1 = PATHCONV
+   end
+   local
+      signature PATHCONV = gs_1
+      clr/PathConv.sml
+   in
+      structure gs_2 = PathConv
+   end
+   local
+      open l4
+   in
+      structure gs_3 = String
+   end
+   local
+      open l4
+   in
+      structure gs_4 = List
+   end
+   local
+      open l4
+   in
+      structure gs_5 = OS
+   end
+   local
+      structure OS = gs_5
+      front/interact/TOPLEVEL.sig
+   in
+      signature gs_6 = TOPLEVEL
+   end
+   local
+      open l31
+   in
+      signature gs_7 = ORD_SET
+   end
+   local
+      open l31
+   in
+      signature gs_8 = ORD_MAP
+   end
+   local
+      open l31
+   in
+      signature gs_9 = ORD_KEY
+   end
+   local
+      open l31
+   in
+      signature gs_10 = HASH_KEY
+   end
+   local
+      open l4
+   in
+      structure gs_11 = Word8VectorSlice
+   end
+   local
+      open l4
+   in
+      structure gs_12 = Word8
+   end
+   local
+      open l4
+   in
+      structure gs_13 = Word8Vector
+   end
+   local
+      open l4
+   in
+      structure gs_14 = Word
+   end
+   local
+      open l4
+   in
+      structure gs_15 = Char
+   end
+   local
+      open l4
+   in
+      structure gs_16 = Int
+   end
+   local
+      structure Word8Vector = gs_13
+      common/values/PACKABLE.sig
+   in
+      signature gs_17 = PACKABLE
+   end
+   local
+      open l4
+   in
+      structure gs_18 = StringCvt
+   end
+   local
+      open l4
+   in
+      structure gs_19 = Int32
+   end
+   local
+      open l4
+   in
+      structure gs_20 = Word32
+   end
+   local
+      open l4
+   in
+      structure gs_21 = BinIO
+   end
+   local
+      common/values/NUMOPS.sig
+   in
+      signature gs_22 = NUMOPS
+   end
+   local
+      common/values/IntConvFlags.sml
+   in
+      structure gs_23 = IntConvFlags
+   end
+   local
+      structure BinIO = gs_21
+      structure Int32 = gs_19
+      structure IntConvFlags = gs_23
+      signature NUMOPS = gs_22
+      signature PACKABLE = gs_17
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/values/RTINT.sig
+   in
+      signature gs_24 = RTINT
+   end
+   local
+      open l4
+   in
+      structure gs_25 = CharVector
+   end
+   local
+      structure IntConvFlags = gs_23
+      common/values/INTCONV.sig
+   in
+      signature gs_26 = INTCONV
+   end
+   local
+      common/values/INTOPS.sig
+   in
+      signature gs_27 = INTOPS
+   end
+   local
+      structure CharVector = gs_25
+      signature INTCONV = gs_26
+      signature INTOPS = gs_27
+      structure IntConvFlags = gs_23
+      common/values/IntConv.sml
+   in
+      functor gs_28 = IntConv
+   end
+   local
+      structure Word32 = gs_20
+      common/values/MULCARRY.sig
+   in
+      signature gs_29 = MULCARRY
+   end
+   local
+      signature MULCARRY = gs_29
+      structure Word32 = gs_20
+      common/values/MulCarry.sml
+   in
+      structure gs_30 = MulCarry
+   end
+   local
+      structure Int32 = gs_19
+      structure Word = gs_14
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/NUMBERS.sig
+   in
+      signature gs_31 = NUMBERS
+   end
+   local
+      structure Int = gs_16
+      structure Int32 = gs_19
+      signature NUMBERS = gs_31
+      structure Word = gs_14
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/Numbers.sml
+   in
+      structure gs_32 = Numbers
+   end
+   local
+      structure BinIO = gs_21
+      structure Int = gs_16
+      structure Int32 = gs_19
+      structure Word = gs_14
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/READINTS.sig
+   in
+      signature gs_33 = READINTS
+   end
+   local
+      common/utils/ASSERT.sig
+   in
+      signature gs_34 = ASSERT
+   end
+   local
+      signature ASSERT = gs_34
+      common/utils/Assert.sml
+   in
+      structure gs_35 = Assert
+   end
+   local
+      structure Assert = gs_35
+      structure BinIO = gs_21
+      structure Int = gs_16
+      structure Int32 = gs_19
+      structure List = gs_4
+      signature READINTS = gs_33
+      structure Word = gs_14
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/ReadInts.sml
+   in
+      structure gs_36 = ReadInts
+   end
+   local
+      signature INTOPS = gs_27
+      structure Int = gs_16
+      structure Int32 = gs_19
+      functor IntConv = gs_28
+      structure MulCarry = gs_30
+      signature NUMOPS = gs_22
+      structure Numbers = gs_32
+      signature PACKABLE = gs_17
+      signature RTINT = gs_24
+      structure ReadInts = gs_36
+      structure Word = gs_14
+      structure Word32 = gs_20
+      common/values/RTInt.sml
+   in
+      structure gs_37 = RTInt
+   end
+   local
+      structure RTInt = gs_37
+      common/values/UCHAR.sig
+   in
+      signature gs_38 = UCHAR
+   end
+   local
+      structure Char = gs_15
+      structure RTInt = gs_37
+      structure String = gs_3
+      structure StringCvt = gs_18
+      signature UCHAR = gs_38
+      structure Word = gs_14
+      common/values/UChar.sml
+   in
+      structure gs_39 = UChar
+   end
+   local
+      signature HASH_KEY = gs_10
+      signature PACKABLE = gs_17
+      structure UChar = gs_39
+      structure Word8Vector = gs_13
+      common/values/USTRING.sig
+   in
+      signature gs_40 = USTRING
+   end
+   local
+      open l4
+   in
+      structure gs_41 = Unsafe
+   end
+   local
+      open l4
+   in
+      structure gs_42 = Real
+   end
+   local
+      structure Word8Vector = gs_13
+      common/utils/HASH.sig
+   in
+      signature gs_43 = HASH
+   end
+   local
+      structure Char = gs_15
+      signature HASH = gs_43
+      structure Real = gs_42
+      structure String = gs_3
+      structure Unsafe = gs_41
+      structure Word = gs_14
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/Hash.sml
+   in
+      structure gs_44 = Hash
+   end
+   local
+      structure Char = gs_15
+      structure Hash = gs_44
+      structure Int = gs_16
+      structure List = gs_4
+      structure Numbers = gs_32
+      structure String = gs_3
+      structure UChar = gs_39
+      signature USTRING = gs_40
+      structure Word = gs_14
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      structure Word8VectorSlice = gs_11
+      common/values/UString.sml
+   in
+      structure gs_45 = UString
+   end
+   local
+      signature HASH_KEY = gs_10
+      signature ORD_KEY = gs_9
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      structure UString = gs_45
+      common/utils/SYMBOL.sig
+   in
+      signature gs_46 = SYMBOL
+   end
+   local
+      common/utils/RESERVED.sig
+   in
+      signature gs_47 = RESERVED
+   end
+   local
+      open l31
+   in
+      structure gs_48 = IntBinarySet
+   end
+   local
+      open l31
+   in
+      structure gs_49 = IntBinaryMap
+   end
+   local
+      open l4
+   in
+      structure gs_50 = Array
+   end
+   local
+      structure Array = gs_50
+      signature HASH_KEY = gs_10
+      structure Int = gs_16
+      structure IntBinaryMap = gs_49
+      structure IntBinarySet = gs_48
+      structure List = gs_4
+      signature ORD_KEY = gs_9
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      signature SYMBOL = gs_46
+      structure String = gs_3
+      structure UString = gs_45
+      structure Word = gs_14
+      common/utils/GeneralSymbol.sml
+   in
+      structure gs_51 = GeneralSymbol
+   end
+   local
+      structure GeneralSymbol = gs_51
+      structure List = gs_4
+      signature RESERVED = gs_47
+      common/utils/Reserved.sml
+   in
+      structure gs_52 = Reserved
+   end
+   local
+      structure GeneralSymbol = gs_51
+      structure Reserved = gs_52
+      signature SYMBOL = gs_46
+      common/utils/Symbol.sml
+   in
+      structure gs_53 = Symbol
+   end
+   local
+      parse/pre/POSITION.sig
+   in
+      signature gs_54 = POSITION
+   end
+   local
+      signature POSITION = gs_54
+      parse/pre/FilePosition.sml
+   in
+      structure gs_55 = FilePosition
+   end
+   local
+      structure IntConvFlags = gs_23
+      structure RTInt = gs_37
+      structure UChar = gs_39
+      structure UString = gs_45
+      parse/pre/SCon.sml
+   in
+      structure gs_56 = SCon
+   end
+   local
+      structure FilePosition = gs_55
+      structure SCon = gs_56
+      structure Symbol = gs_53
+      parse/pre/Syntax.sml
+   in
+      structure gs_57 = Syntax
+   end
+   local
+      structure Syntax = gs_57
+      front/script/CommandSyntax.sml
+   in
+      structure gs_58 = CommandSyntax
+   end
+   local
+      gen/DARRAY.sig
+   in
+      signature gs_59 = DARRAY
+   end
+   local
+      structure Array = gs_50
+      signature DARRAY = gs_59
+      structure Int = gs_16
+      gen/DynIntArray.sml
+   in
+      structure gs_60 = DynIntArray
+   end
+   local
+      parse/pre/SOURCE_MAP.sig
+   in
+      signature gs_61 = SOURCE_MAP
+   end
+   local
+      structure DynIntArray = gs_60
+      structure Int = gs_16
+      signature SOURCE_MAP = gs_61
+      parse/pre/SourceMap.sml
+   in
+      structure gs_62 = SourceMap
+   end
+   local
+      open l31
+   in
+      structure gs_63 = ListMergeSort
+   end
+   local
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListMergeSort = gs_63
+      structure SourceMap = gs_62
+      structure String = gs_3
+      structure Syntax = gs_57
+      parse/pre/Error.sml
+   in
+      structure gs_64 = Error
+   end
+   local
+      open l4
+   in
+      structure gs_65 = Substring
+   end
+   local
+      structure CommandSyntax = gs_58
+      structure Error = gs_64
+      structure SourceMap = gs_62
+      front/script/PARSECOMMAND.sig
+   in
+      signature gs_66 = PARSECOMMAND
+   end
+   local
+      structure Char = gs_15
+      structure CommandSyntax = gs_58
+      structure Error = gs_64
+      structure Int = gs_16
+      signature PARSECOMMAND = gs_66
+      structure SourceMap = gs_62
+      structure String = gs_3
+      structure Substring = gs_65
+      front/script/ParseCommand.sml
+   in
+      structure gs_67 = ParseCommand
+   end
+   local
+      open l4
+   in
+      structure gs_68 = Timer
+   end
+   local
+      open l4
+   in
+      structure gs_69 = Time
+   end
+   local
+      gen/NEWPRETTY.sig
+   in
+      signature gs_70 = NEWPRETTY
+   end
+   local
+      signature NEWPRETTY = gs_70
+      gen/NewPretty.sml
+   in
+      structure gs_71 = NewPretty
+   end
+   local
+      open l31
+   in
+      functor gs_72 = SplayMapFn
+   end
+   local
+      signature ORD_KEY = gs_9
+      signature ORD_MAP = gs_8
+      functor SplayMapFn = gs_72
+      gen/MapFn.sml
+   in
+      functor gs_73 = MapFn
+   end
+   local
+      functor MapFn = gs_73
+      structure String = gs_3
+      gen/StringMap.sml
+   in
+      structure gs_74 = StringMap
+   end
+   local
+      env/CONTROLS.sig
+   in
+      signature gs_75 = CONTROLS
+   end
+   local
+      gen/PRETTY.sig
+   in
+      signature gs_76 = PRETTY
+   end
+   local
+      structure Char = gs_15
+      structure CharVector = gs_25
+      signature PRETTY = gs_76
+      gen/Pretty.sml
+   in
+      structure gs_77 = Pretty
+   end
+   local
+      structure OS = gs_5
+      env/COMMANDS.sig
+   in
+      signature gs_78 = COMMANDS
+   end
+   local
+      signature COMMANDS = gs_78
+      structure Char = gs_15
+      structure OS = gs_5
+      structure Pretty = gs_77
+      structure String = gs_3
+      structure StringMap = gs_74
+      env/Commands.sml
+   in
+      structure gs_79 = Commands
+   end
+   local
+      signature CONTROLS = gs_75
+      structure Char = gs_15
+      structure Commands = gs_79
+      structure Int = gs_16
+      structure List = gs_4
+      structure OS = gs_5
+      structure String = gs_3
+      structure StringMap = gs_74
+      env/Controls.sml
+   in
+      structure gs_80 = Controls
+   end
+   local
+      structure Controls = gs_80
+      structure NewPretty = gs_71
+      structure Timer = gs_68
+      env/PRINTMANAGER.sig
+   in
+      signature gs_81 = PRINTMANAGER
+   end
+   local
+      structure NewPretty = gs_71
+      env/DEBUG.sig
+   in
+      signature gs_82 = DEBUG
+   end
+   local
+      open l4
+   in
+      structure gs_83 = TextIO
+   end
+   local
+      structure String = gs_3
+      structure TextIO = gs_83
+      prelude/smlnjfixes.sml
+   in
+      structure gs_84 = TextIO
+   end
+   local
+      structure Char = gs_15
+      structure Commands = gs_79
+      signature DEBUG = gs_82
+      structure NewPretty = gs_71
+      structure OS = gs_5
+      structure String = gs_3
+      structure TextIO = gs_84
+      structure Time = gs_69
+      structure Timer = gs_68
+      env/Debug.sml
+   in
+      structure gs_85 = Debug
+   end
+   local
+      structure CharVector = gs_25
+      structure Controls = gs_80
+      structure Debug = gs_85
+      signature PRINTMANAGER = gs_81
+      structure TextIO = gs_84
+      structure Time = gs_69
+      structure Timer = gs_68
+      env/PrintManager.sml
+   in
+      structure gs_86 = PrintManager
+   end
+   local
+      open l4
+   in
+      structure gs_87 = Signals
+   end
+   local
+      structure SMLofNJ = gs_0
+      structure Signals = gs_87
+      front/interact/Interrupt.sml
+   in
+      structure gs_88 = Interrupt
+   end
+   local
+      gen/QuickSort.sml
+   in
+      structure gs_89 = QuickSort
+   end
+   local
+      structure QuickSort = gs_89
+      structure Symbol = gs_53
+      structure UString = gs_45
+      sym/Id.sml
+   in
+      structure gs_90 = Id
+   end
+   local
+      structure Id = gs_90
+      clr/RuntimeNames.sml
+   in
+      structure gs_91 = RuntimeNames
+   end
+   local
+      structure OS = gs_5
+      clr/RUNTIMEENV.sig
+   in
+      signature gs_92 = RUNTIMEENV
+   end
+   local
+      structure BinIO = gs_21
+      structure Controls = gs_80
+      structure OS = gs_5
+      structure PathConv = gs_2
+      structure PrintManager = gs_86
+      signature RUNTIMEENV = gs_92
+      structure RuntimeNames = gs_91
+      structure String = gs_3
+      structure TextIO = gs_84
+      clr/RuntimeEnv.sml
+   in
+      structure gs_93 = RuntimeEnv
+   end
+   local
+      clr/Version.sml
+   in
+      structure gs_94 = Version
+   end
+   local
+      structure Controls = gs_80
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure Version = gs_94
+      clr/Welcome.sml
+   in
+      structure gs_95 = Welcome
+   end
+   local
+      gen/Result.sml
+   in
+      structure gs_96 = Result
+   end
+   local
+      structure OS = gs_5
+      structure Result = gs_96
+      structure String = gs_3
+      structure TextIO = gs_83
+      structure Time = gs_69
+      gen/FileOps.sml
+   in
+      structure gs_97 = FileOps
+   end
+   local
+      gen/Gen.sml
+   in
+      structure gs_98 = Gen
+   end
+   local
+      structure CommandSyntax = gs_58
+      front/script/INTERPRETCOMMAND.sig
+   in
+      signature gs_99 = INTERPRETCOMMAND
+   end
+   local
+      open l4
+   in
+      structure gs_100 = IO
+   end
+   local
+      structure CommandSyntax = gs_58
+      structure SourceMap = gs_62
+      front/script/SCRIPT.sig
+   in
+      signature gs_101 = SCRIPT
+   end
+   local
+      structure Error = gs_64
+      structure SourceMap = gs_62
+      front/proj/ERRORMANAGER.sig
+   in
+      signature gs_102 = ERRORMANAGER
+   end
+   local
+      structure Controls = gs_80
+      signature ERRORMANAGER = gs_102
+      structure Error = gs_64
+      structure PrintManager = gs_86
+      structure TextIO = gs_84
+      front/proj/ErrorManager.sml
+   in
+      structure gs_103 = ErrorManager
+   end
+   local
+      structure CommandSyntax = gs_58
+      structure ErrorManager = gs_103
+      structure FileOps = gs_97
+      structure IO = gs_100
+      structure OS = gs_5
+      structure ParseCommand = gs_67
+      structure RuntimeNames = gs_91
+      signature SCRIPT = gs_101
+      front/script/Script.sml
+   in
+      structure gs_104 = Script
+   end
+   local
+      structure CommandSyntax = gs_58
+      structure Commands = gs_79
+      structure Controls = gs_80
+      structure FileOps = gs_97
+      structure Gen = gs_98
+      signature INTERPRETCOMMAND = gs_99
+      structure OS = gs_5
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure SMLofNJ = gs_0
+      structure Script = gs_104
+      structure SourceMap = gs_62
+      front/script/InterpretCommand.sml
+   in
+      structure gs_105 = InterpretCommand
+   end
+   local
+      open l4
+   in
+      structure gs_106 = Option
+   end
+   local
+      open l31
+   in
+      functor gs_107 = SplaySetFn
+   end
+   local
+      signature ORD_KEY = gs_9
+      signature ORD_SET = gs_7
+      functor SplaySetFn = gs_107
+      gen/SetFn.sml
+   in
+      functor gs_108 = SetFn
+   end
+   local
+      gen/COMPARE.sig
+   in
+      signature gs_109 = COMPARE
+   end
+   local
+      signature COMPARE = gs_109
+      gen/Compare.sml
+   in
+      structure gs_110 = Compare
+   end
+   local
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      structure Symbol = gs_53
+      sym/LONGID.sig
+   in
+      signature gs_111 = LONGID
+   end
+   local
+      structure Compare = gs_110
+      structure Id = gs_90
+      signature LONGID = gs_111
+      functor MapFn = gs_73
+      functor SetFn = gs_108
+      structure Symbol = gs_53
+      sym/Longid.sml
+   in
+      structure gs_112 = Longid
+   end
+   local
+      structure BinIO = gs_21
+      signature PACKABLE = gs_17
+      structure Word8Vector = gs_13
+      common/values/RTDOUBLE.sig
+   in
+      signature gs_113 = RTDOUBLE
+   end
+   local
+      structure Int = gs_16
+      signature ORD_KEY = gs_9
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/utils/W8Order.sml
+   in
+      structure gs_114 = W8Order
+   end
+   local
+      structure Word8Vector = gs_13
+      common/values/PACKFLOAT.sig
+   in
+      signature gs_115 = PACKFLOAT
+   end
+   local
+      structure Int = gs_16
+      structure List = gs_4
+      signature PACKFLOAT = gs_115
+      structure Real = gs_42
+      structure Word = gs_14
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/values/PackFloat.sml
+   in
+      structure gs_116 = PackFloat
+   end
+   local
+      structure Word8Vector = gs_13
+      common/values/UNPACKFLOAT.sig
+   in
+      signature gs_117 = UNPACKFLOAT
+   end
+   local
+      structure List = gs_4
+      signature UNPACKFLOAT = gs_117
+      structure Word = gs_14
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      common/values/UnPackFloat.sml
+   in
+      structure gs_118 = UnPackFloat
+   end
+   local
+      signature PACKABLE = gs_17
+      structure PackFloat = gs_116
+      signature RTDOUBLE = gs_113
+      structure ReadInts = gs_36
+      structure Real = gs_42
+      structure UnPackFloat = gs_118
+      structure W8Order = gs_114
+      structure Word8Vector = gs_13
+      common/values/RTDouble.sml
+   in
+      structure gs_119 = RTDouble
+   end
+   local
+      structure Symbol = gs_53
+      structure UString = gs_45
+      common/handles/CLASSHANDLE.sig
+   in
+      signature gs_120 = CLASSHANDLE
+   end
+   local
+      signature CLASSHANDLE = gs_120
+      structure Symbol = gs_53
+      structure UString = gs_45
+      common/handles/ClassHandle.sml
+   in
+      structure gs_121 = ClassHandle
+   end
+   local
+      structure ClassHandle = gs_121
+      signature ORD_KEY = gs_9
+      common/typesconsts/TYPES.sig
+   in
+      signature gs_122 = TYPES
+   end
+   local
+      structure ClassHandle = gs_121
+      structure Int = gs_16
+      structure List = gs_4
+      structure String = gs_3
+      signature TYPES = gs_122
+      structure UString = gs_45
+      common/typesconsts/Types.sml
+   in
+      structure gs_123 = Types
+   end
+   local
+      structure BinIO = gs_21
+      signature PACKABLE = gs_17
+      structure Word8Vector = gs_13
+      common/values/RTFLOAT.sig
+   in
+      signature gs_124 = RTFLOAT
+   end
+   local
+      signature PACKABLE = gs_17
+      structure PackFloat = gs_116
+      signature RTFLOAT = gs_124
+      structure ReadInts = gs_36
+      structure Real = gs_42
+      structure UnPackFloat = gs_118
+      structure W8Order = gs_114
+      structure Word8Vector = gs_13
+      common/values/RTFloat.sml
+   in
+      structure gs_125 = RTFloat
+   end
+   local
+      structure BinIO = gs_21
+      structure IntConvFlags = gs_23
+      signature NUMOPS = gs_22
+      signature PACKABLE = gs_17
+      structure RTInt = gs_37
+      structure Word32 = gs_20
+      common/values/RTLONG.sig
+   in
+      signature gs_126 = RTLONG
+   end
+   local
+      common/values/REP16.sig
+   in
+      signature gs_127 = REP16
+   end
+   local
+      signature NUMOPS = gs_22
+      signature REP16 = gs_127
+      common/values/Rep16.sml
+   in
+      functor gs_128 = Rep16
+   end
+   local
+      signature INTOPS = gs_27
+      structure Int = gs_16
+      structure Int32 = gs_19
+      functor IntConv = gs_28
+      structure List = gs_4
+      structure MulCarry = gs_30
+      signature NUMOPS = gs_22
+      structure Numbers = gs_32
+      signature PACKABLE = gs_17
+      structure RTInt = gs_37
+      signature RTLONG = gs_126
+      structure ReadInts = gs_36
+      functor Rep16 = gs_128
+      structure Word = gs_14
+      structure Word32 = gs_20
+      structure Word8Vector = gs_13
+      common/values/RTLong.sml
+   in
+      structure gs_129 = RTLong
+   end
+   local
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Types = gs_123
+      structure UString = gs_45
+      common/typesconsts/CONSTANTS.sig
+   in
+      signature gs_130 = CONSTANTS
+   end
+   local
+      signature CONSTANTS = gs_130
+      structure ClassHandle = gs_121
+      structure Int = gs_16
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Types = gs_123
+      structure UString = gs_45
+      common/typesconsts/Constants.sml
+   in
+      structure gs_131 = Constants
+   end
+   local
+      open l4
+   in
+      structure gs_132 = Byte
+   end
+   local
+      structure Word32 = gs_20
+      pickle/BASEPICKLESIG.sig
+   in
+      signature gs_133 = BASEPICKLESIG
+   end
+   local
+      signature BASEPICKLESIG = gs_133
+      structure Int32 = gs_19
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      pickle/PICKLESIG.sig
+   in
+      signature gs_134 = PICKLESIG
+   end
+   local
+      open l31
+   in
+      structure gs_135 = IntRedBlackMap
+   end
+   local
+      structure IntRedBlackMap = gs_135
+      gen/IntMap.sml
+   in
+      structure gs_136 = IntMap
+   end
+   local
+      open l4
+   in
+      structure gs_137 = Vector
+   end
+   local
+      structure Word32 = gs_20
+      pickle/CODEC.sig
+   in
+      signature gs_138 = CODEC
+   end
+   local
+      signature BASEPICKLESIG = gs_133
+      signature CODEC = gs_138
+      structure Int = gs_16
+      structure IntMap = gs_136
+      structure List = gs_4
+      structure SMLofNJ = gs_0
+      structure Vector = gs_137
+      structure Word32 = gs_20
+      pickle/BasePickleFun.sml
+   in
+      functor gs_139 = BasePickleFun
+   end
+   local
+      functor BasePickleFun = gs_139
+      structure Byte = gs_132
+      signature CODEC = gs_138
+      structure Int32 = gs_19
+      signature PICKLESIG = gs_134
+      structure String = gs_3
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      pickle/PickleFun.sml
+   in
+      functor gs_140 = PickleFun
+   end
+   local
+      functor PickleFun = gs_140
+      structure Word32 = gs_20
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      pickle/BytePickle.sml
+   in
+      structure gs_141 = BytePickle
+   end
+   local
+      structure BinIO = gs_21
+      structure BytePickle = gs_141
+      structure Word8Vector = gs_13
+      pickle/Pickle.sml
+   in
+      structure gs_142 = Pickle
+   end
+   local
+      structure Pickle = gs_142
+      structure Symbol = gs_53
+      structure UString = gs_45
+      sym/IdPickle.sml
+   in
+      structure gs_143 = IdPickle
+   end
+   local
+      open l4
+   in
+      structure gs_144 = ListPair
+   end
+   local
+      gen/EQ.sig
+   in
+      signature gs_145 = EQ
+   end
+   local
+      signature EQ = gs_145
+      gen/Eq.sml
+   in
+      structure gs_146 = Eq
+   end
+   local
+      structure Pickle = gs_142
+      front/genty/TYSORT.sig
+   in
+      signature gs_147 = TYSORT
+   end
+   local
+      structure Compare = gs_110
+      structure Pickle = gs_142
+      signature TYSORT = gs_147
+      structure Word = gs_14
+      front/genty/TySort.sml
+   in
+      structure gs_148 = TySort
+   end
+   local
+      structure Int = gs_16
+      gen/ListOps.sml
+   in
+      structure gs_149 = ListOps
+   end
+   local
+      structure Int = gs_16
+      functor MapFn = gs_73
+      structure SMLofNJ = gs_0
+      functor SetFn = gs_108
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure Time = gs_69
+      front/entity/Entity.sml
+   in
+      structure gs_150 = Entity
+   end
+   local
+      structure Entity = gs_150
+      structure Id = gs_90
+      structure Longid = gs_112
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      structure Pickle = gs_142
+      front/genty/TYNAME.sig
+   in
+      signature gs_151 = TYNAME
+   end
+   local
+      structure Entity = gs_150
+      structure Pickle = gs_142
+      front/entity/ENTITYOPS.sig
+   in
+      signature gs_152 = ENTITYOPS
+   end
+   local
+      structure Controls = gs_80
+      signature ENTITYOPS = gs_152
+      structure Entity = gs_150
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Pickle = gs_142
+      structure Symbol = gs_53
+      structure Time = gs_69
+      structure Word32 = gs_20
+      front/entity/EntityOps.sml
+   in
+      structure gs_153 = EntityOps
+   end
+   local
+      structure Compare = gs_110
+      structure Controls = gs_80
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure Longid = gs_112
+      functor MapFn = gs_73
+      structure Pickle = gs_142
+      functor SetFn = gs_108
+      structure Symbol = gs_53
+      signature TYNAME = gs_151
+      structure Word = gs_14
+      front/genty/TyName.sml
+   in
+      structure gs_154 = TyName
+   end
+   local
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      structure Pickle = gs_142
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TySort = gs_148
+      front/smlty/TYVAR.sig
+   in
+      signature gs_155 = TYVAR
+   end
+   local
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Int = gs_16
+      functor MapFn = gs_73
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      functor SetFn = gs_108
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      signature TYVAR = gs_155
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure UString = gs_45
+      front/smlty/TyVar.sml
+   in
+      structure gs_156 = TyVar
+   end
+   local
+      structure Pickle = gs_142
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      front/smlty/SMLTY.sig
+   in
+      signature gs_157 = SMLTY
+   end
+   local
+      structure Id = gs_90
+      front/rep/REPNAMES.sig
+   in
+      signature gs_158 = REPNAMES
+   end
+   local
+      structure Id = gs_90
+      structure Int = gs_16
+      structure Pretty = gs_77
+      signature REPNAMES = gs_158
+      front/rep/RepNames.sml
+   in
+      structure gs_159 = RepNames
+   end
+   local
+      structure Debug = gs_85
+      structure Entity = gs_150
+      structure Id = gs_90
+      structure Pretty = gs_77
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure TyName = gs_154
+      front/genty/TyNames.sml
+   in
+      structure gs_160 = TyNames
+   end
+   local
+      structure Compare = gs_110
+      structure Debug = gs_85
+      structure Eq = gs_146
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Option = gs_106
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      signature SMLTY = gs_157
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      front/smlty/SMLTy.sml
+   in
+      structure gs_161 = SMLTy
+   end
+   local
+      structure Constants = gs_131
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      front/interop/InterOpTypes.sml
+   in
+      structure gs_162 = InterOpTypes
+   end
+   local
+      structure Id = gs_90
+      structure InterOpTypes = gs_162
+      structure Longid = gs_112
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      front/proj/PACKAGEMANAGER.sig
+   in
+      signature gs_163 = PACKAGEMANAGER
+   end
+   local
+      structure SMLTy = gs_161
+      front/smlty/SMLPRIMTY.sig
+   in
+      signature gs_164 = SMLPRIMTY
+   end
+   local
+      signature SMLPRIMTY = gs_164
+      structure SMLTy = gs_161
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/smlty/SMLPrimTy.sml
+   in
+      structure gs_165 = SMLPrimTy
+   end
+   local
+      structure Char = gs_15
+      structure Constants = gs_131
+      structure Id = gs_90
+      structure Int = gs_16
+      structure IntConvFlags = gs_23
+      structure Longid = gs_112
+      structure OS = gs_5
+      structure PrintManager = gs_86
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Real = gs_42
+      structure SMLPrimTy = gs_165
+      structure SMLTy = gs_161
+      structure String = gs_3
+      structure Substring = gs_65
+      structure Symbol = gs_53
+      structure TextIO = gs_84
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure UChar = gs_39
+      structure UString = gs_45
+      clr/Decoder.sml
+   in
+      structure gs_166 = Decoder
+   end
+   local
+      structure Char = gs_15
+      structure Commands = gs_79
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Decoder = gs_166
+      structure FileOps = gs_97
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure List = gs_4
+      structure OS = gs_5
+      structure Option = gs_106
+      signature PACKAGEMANAGER = gs_163
+      structure PathConv = gs_2
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RuntimeEnv = gs_93
+      structure String = gs_3
+      structure Substring = gs_65
+      structure Symbol = gs_53
+      structure TextIO = gs_84
+      structure Time = gs_69
+      structure UString = gs_45
+      clr/PackageManager.sml
+   in
+      structure gs_167 = PackageManager
+   end
+   local
+      structure Entity = gs_150
+      structure Syntax = gs_57
+      front/proj/SOURCEMANAGER.sig
+   in
+      signature gs_168 = SOURCEMANAGER
+   end
+   local
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure SourceMap = gs_62
+      structure Syntax = gs_57
+      parse/post/SYNTAXCHECK.sig
+   in
+      signature gs_169 = SYNTAXCHECK
+   end
+   local
+      structure Syntax = gs_57
+      parse/post/FIXITY.sig
+   in
+      signature gs_170 = FIXITY
+   end
+   local
+      signature FIXITY = gs_170
+      structure Symbol = gs_53
+      structure UString = gs_45
+      parse/post/Fixity.sml
+   in
+      structure gs_171 = Fixity
+   end
+   local
+      structure Debug = gs_85
+      structure Fixity = gs_171
+      structure Id = gs_90
+      parse/post/ResolvePrec.sml
+   in
+      structure gs_172 = ResolvePrec
+   end
+   local
+      structure Error = gs_64
+      structure Id = gs_90
+      structure Pretty = gs_77
+      parse/post/SyntaxCheckOps.sml
+   in
+      structure gs_173 = SyntaxCheckOps
+   end
+   local
+      structure Debug = gs_85
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure Fixity = gs_171
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure ResolvePrec = gs_172
+      structure SCon = gs_56
+      signature SYNTAXCHECK = gs_169
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure SyntaxCheckOps = gs_173
+      parse/post/SyntaxCheck.sml
+   in
+      structure gs_174 = SyntaxCheck
+   end
+   local
+      open l622
+   in
+      structure gs_175 = LrParser
+   end
+   local
+      structure Error = gs_64
+      structure SourceMap = gs_62
+      structure Syntax = gs_57
+      parse/pre/PARSE.sig
+   in
+      signature gs_176 = PARSE
+   end
+   local
+      open l622
+   in
+      functor gs_177 = Join
+      functor gs_178 = JoinWithArg
+   end
+   local
+      open l4
+   in
+      structure gs_179 = TextPrimIO
+   end
+   local
+      structure Syntax = gs_57
+      parse/pre/TOKENTABLE.sig
+   in
+      signature gs_180 = TOKENTABLE
+   end
+   local
+      open l622
+   in
+      signature gs_181 = ARG_LEXER
+      signature gs_182 = ARG_PARSER
+      signature gs_183 = LEXER
+      signature gs_184 = LR_PARSER
+      signature gs_185 = LR_TABLE
+      signature gs_186 = PARSER
+      signature gs_187 = PARSER_DATA
+      signature gs_188 = STREAM
+      signature gs_189 = TOKEN
+   end
+   local
+      signature ARG_LEXER = gs_181
+      signature ARG_PARSER = gs_182
+      signature LEXER = gs_183
+      signature LR_PARSER = gs_184
+      signature LR_TABLE = gs_185
+      signature PARSER = gs_186
+      signature PARSER_DATA = gs_187
+      structure SCon = gs_56
+      signature STREAM = gs_188
+      structure Syntax = gs_57
+      signature TOKEN = gs_189
+      parse/pre/ml.grm.sig
+   in
+      signature gs_190 = ML_LRVALS
+      signature gs_191 = ML_TOKENS
+   end
+   local
+      structure Int = gs_16
+      structure List = gs_4
+      signature ML_LRVALS = gs_190
+      signature ML_TOKENS = gs_191
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      signature TOKENTABLE = gs_180
+      structure Unsafe = gs_41
+      structure Vector = gs_137
+      structure Word = gs_14
+      parse/pre/TokenTable.sml
+   in
+      functor gs_192 = TokenTable
+   end
+   local
+      structure Error = gs_64
+      structure SourceMap = gs_62
+      parse/pre/LEXSTATE.sig
+   in
+      signature gs_193 = LEXSTATE
+   end
+   local
+      structure Error = gs_64
+      signature LEXSTATE = gs_193
+      structure SourceMap = gs_62
+      parse/pre/LexState.sml
+   in
+      structure gs_194 = LexState
+   end
+   local
+      structure Char = gs_15
+      structure Error = gs_64
+      structure FilePosition = gs_55
+      structure IO = gs_100
+      structure Int = gs_16
+      structure IntConvFlags = gs_23
+      structure LexState = gs_194
+      structure List = gs_4
+      signature ML_LRVALS = gs_190
+      signature ML_TOKENS = gs_191
+      structure RTInt = gs_37
+      structure SCon = gs_56
+      structure SourceMap = gs_62
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure TextIO = gs_83
+      structure TextPrimIO = gs_179
+      functor TokenTable = gs_192
+      structure UString = gs_45
+      structure Vector = gs_137
+      structure Word = gs_14
+      parse/pre/ml.lex.sml
+   in
+      functor gs_195 = MLLexFun
+   end
+   local
+      open l4
+   in
+      structure gs_196 = General
+   end
+   local
+      signature ARG_LEXER = gs_181
+      signature ARG_PARSER = gs_182
+      structure Array = gs_50
+      structure Char = gs_15
+      structure Error = gs_64
+      structure FilePosition = gs_55
+      structure General = gs_196
+      structure Int = gs_16
+      structure IntConvFlags = gs_23
+      signature LEXER = gs_183
+      signature LR_PARSER = gs_184
+      signature LR_TABLE = gs_185
+      structure LexState = gs_194
+      structure List = gs_4
+      signature ML_LRVALS = gs_190
+      signature ML_TOKENS = gs_191
+      signature PARSER = gs_186
+      signature PARSER_DATA = gs_187
+      structure SCon = gs_56
+      signature STREAM = gs_188
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      signature TOKEN = gs_189
+      parse/pre/ml.grm.sml
+   in
+      functor gs_197 = MLLrValsFun
+   end
+   local
+      structure LrParser = gs_175
+      functor MLLrValsFun = gs_197
+      parse/pre/MLLrVals.sml
+   in
+      structure gs_198 = MLLrVals
+   end
+   local
+      functor MLLexFun = gs_195
+      structure MLLrVals = gs_198
+      parse/pre/MLLex.sml
+   in
+      structure gs_199 = MLLex
+   end
+   local
+      functor Join = gs_177
+      functor JoinWithArg = gs_178
+      structure LrParser = gs_175
+      structure MLLex = gs_199
+      structure MLLrVals = gs_198
+      parse/pre/MLParser.sml
+   in
+      structure gs_200 = MLParser
+   end
+   local
+      structure Error = gs_64
+      structure IO = gs_100
+      structure LexState = gs_194
+      structure LrParser = gs_175
+      structure MLParser = gs_200
+      signature PARSE = gs_176
+      structure SourceMap = gs_62
+      structure String = gs_3
+      structure Syntax = gs_57
+      structure TextIO = gs_83
+      parse/pre/Parse.sml
+   in
+      structure gs_201 = Parse
+   end
+   local
+      structure Entity = gs_150
+      structure SourceMap = gs_62
+      structure Syntax = gs_57
+      front/proj/PARSEMANAGER.sig
+   in
+      signature gs_202 = PARSEMANAGER
+   end
+   local
+      structure Error = gs_64
+      structure ErrorManager = gs_103
+      structure FileOps = gs_97
+      structure List = gs_4
+      signature PARSEMANAGER = gs_202
+      structure Parse = gs_201
+      structure PrintManager = gs_86
+      structure SourceMap = gs_62
+      structure StringMap = gs_74
+      structure Syntax = gs_57
+      structure SyntaxCheck = gs_174
+      structure Time = gs_69
+      front/proj/ParseManager.sml
+   in
+      structure gs_203 = ParseManager
+   end
+   local
+      structure Char = gs_15
+      structure Commands = gs_79
+      structure Entity = gs_150
+      structure FileOps = gs_97
+      structure IO = gs_100
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure OS = gs_5
+      structure ParseManager = gs_203
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure Result = gs_96
+      signature SOURCEMANAGER = gs_168
+      structure String = gs_3
+      structure StringMap = gs_74
+      structure Syntax = gs_57
+      structure SyntaxCheck = gs_174
+      structure Time = gs_69
+      front/proj/SourceManager.sml
+   in
+      structure gs_204 = SourceManager
+   end
+   local
+      structure Gen = gs_98
+      structure Pretty = gs_77
+      structure SMLofNJ = gs_0
+      structure String = gs_3
+      front/proj/Path.sml
+   in
+      structure gs_205 = Path
+   end
+   local
+      functor SetFn = gs_108
+      structure String = gs_3
+      gen/StringSet.sml
+   in
+      structure gs_206 = StringSet
+   end
+   local
+      structure List = gs_4
+      structure StringSet = gs_206
+      gen/Dups.sml
+   in
+      structure gs_207 = Dups
+   end
+   local
+      structure OS = gs_5
+      front/proj/MAKE.sig
+   in
+      signature gs_208 = MAKE
+   end
+   local
+      structure Entity = gs_150
+      structure Longid = gs_112
+      parse/post/SYNTAXDEP.sig
+   in
+      signature gs_209 = SYNTAXDEP
+   end
+   local
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Longid = gs_112
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure Syntax = gs_57
+      parse/post/SmallSyntax.sml
+   in
+      structure gs_210 = SmallSyntax
+   end
+   local
+      structure Entity = gs_150
+      structure SmallSyntax = gs_210
+      front/proj/DEPMANAGER.sig
+   in
+      signature gs_211 = DEPMANAGER
+   end
+   local
+      structure SmallSyntax = gs_210
+      structure Syntax = gs_57
+      parse/post/SYNTAXCONVERT.sig
+   in
+      signature gs_212 = SYNTAXCONVERT
+   end
+   local
+      structure Debug = gs_85
+      structure List = gs_4
+      structure Longid = gs_112
+      signature SYNTAXCONVERT = gs_212
+      structure SmallSyntax = gs_210
+      structure Syntax = gs_57
+      parse/post/SyntaxConvert.sml
+   in
+      structure gs_213 = SyntaxConvert
+   end
+   local
+      structure Controls = gs_80
+      signature DEPMANAGER = gs_211
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure List = gs_4
+      structure OS = gs_5
+      structure ParseManager = gs_203
+      structure Pickle = gs_142
+      structure PrintManager = gs_86
+      structure RuntimeNames = gs_91
+      structure SmallSyntax = gs_210
+      structure SourceManager = gs_204
+      structure StringMap = gs_74
+      structure Symbol = gs_53
+      structure SyntaxConvert = gs_213
+      structure Time = gs_69
+      structure Word8Vector = gs_13
+      front/proj/DepManager.sml
+   in
+      structure gs_214 = DepManager
+   end
+   local
+      structure Pickle = gs_142
+      structure Result = gs_96
+      structure SMLTy = gs_161
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/smlty/TYSTR.sig
+   in
+      signature gs_215 = TYSTR
+   end
+   local
+      structure Controls = gs_80
+      structure Eq = gs_146
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Option = gs_106
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure Result = gs_96
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      signature TYSTR = gs_215
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      front/smlty/TyStr.sml
+   in
+      structure gs_216 = TyStr
+   end
+   local
+      structure SMLTy = gs_161
+      structure TyVar = gs_156
+      front/smlty/SMLSch.sml
+   in
+      structure gs_217 = SMLSch
+   end
+   local
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      front/smlenv/ValBind.sml
+   in
+      structure gs_218 = ValBind
+   end
+   local
+      structure Entity = gs_150
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlenv/Env.sml
+   in
+      structure gs_219 = Env
+   end
+   local
+      structure Env = gs_219
+      structure SMLTy = gs_161
+      front/smlenv/TOPENV.sig
+   in
+      signature gs_220 = TOPENV
+   end
+   local
+      structure Env = gs_219
+      structure Pickle = gs_142
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/smlenv/ENVOPS.sig
+   in
+      signature gs_221 = ENVOPS
+   end
+   local
+      gen/OptionOps.sml
+   in
+      structure gs_222 = OptionOps
+   end
+   local
+      structure Constants = gs_131
+      structure InterOpTypes = gs_162
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      front/interop/INTEROP.sig
+   in
+      signature gs_223 = INTEROP
+   end
+   local
+      structure Env = gs_219
+      structure InterOpTypes = gs_162
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      front/interop/TRANSINTER.sig
+   in
+      signature gs_224 = TRANSINTER
+   end
+   local
+      structure Debug = gs_85
+      structure Env = gs_219
+      structure Id = gs_90
+      structure InterOpTypes = gs_162
+      structure List = gs_4
+      structure Longid = gs_112
+      structure PackageManager = gs_167
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      signature TRANSINTER = gs_224
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyStr = gs_216
+      structure ValBind = gs_218
+      front/interop/TransInter.sml
+   in
+      structure gs_225 = TransInter
+   end
+   local
+      structure Constants = gs_131
+      structure Debug = gs_85
+      structure Eq = gs_146
+      signature INTEROP = gs_223
+      structure Id = gs_90
+      structure InterOpTypes = gs_162
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      structure OptionOps = gs_222
+      structure SMLPrimTy = gs_165
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TransInter = gs_225
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/interop/InterOp.sml
+   in
+      structure gs_226 = InterOp
+   end
+   local
+      structure Pickle = gs_142
+      structure SMLTy = gs_161
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlenv/VALBINDOPS.sig
+   in
+      signature gs_227 = VALBINDOPS
+   end
+   local
+      structure Pickle = gs_142
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/smlty/SMLSCHOPS.sig
+   in
+      signature gs_228 = SMLSCHOPS
+   end
+   local
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/smlelab/ELABSTATE.sig
+   in
+      signature gs_229 = ELABSTATE
+   end
+   local
+      signature ELABSTATE = gs_229
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure Option = gs_106
+      structure SMLTy = gs_161
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      structure UString = gs_45
+      front/smlelab/ElabState.sml
+   in
+      structure gs_230 = ElabState
+   end
+   local
+      structure Controls = gs_80
+      structure ElabState = gs_230
+      structure ListPair = gs_144
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      signature SMLSCHOPS = gs_228
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      front/smlty/SMLSchOps.sml
+   in
+      structure gs_231 = SMLSchOps
+   end
+   local
+      structure Eq = gs_146
+      structure IdPickle = gs_143
+      structure InterOp = gs_226
+      structure Option = gs_106
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure SMLSch = gs_217
+      structure SMLSchOps = gs_231
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      signature VALBINDOPS = gs_227
+      structure ValBind = gs_218
+      front/smlenv/ValBindOps.sml
+   in
+      structure gs_232 = ValBindOps
+   end
+   local
+      structure Controls = gs_80
+      signature ENVOPS = gs_221
+      structure EntityOps = gs_153
+      structure Env = gs_219
+      structure Eq = gs_146
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure SMLTy = gs_161
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure TransInter = gs_225
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      structure ValBindOps = gs_232
+      front/smlenv/EnvOps.sml
+   in
+      structure gs_233 = EnvOps
+   end
+   local
+      structure Env = gs_219
+      structure EnvOps = gs_233
+      structure Id = gs_90
+      structure List = gs_4
+      structure SMLPrimTy = gs_165
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      signature TOPENV = gs_220
+      structure TyNames = gs_160
+      structure TySort = gs_148
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlenv/TopEnv.sml
+   in
+      structure gs_234 = TopEnv
+   end
+   local
+      structure DepManager = gs_214
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure Error = gs_64
+      structure Id = gs_90
+      structure Longid = gs_112
+      structure PackageManager = gs_167
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      signature SYNTAXDEP = gs_209
+      structure SmallSyntax = gs_210
+      structure SourceManager = gs_204
+      structure SourceMap = gs_62
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TopEnv = gs_234
+      parse/post/SyntaxDep.sml
+   in
+      structure gs_235 = SyntaxDep
+   end
+   local
+      structure Longid = gs_112
+      structure TyName = gs_154
+      front/proj/PROCESSEXPORTS.sig
+   in
+      signature gs_236 = PROCESSEXPORTS
+   end
+   local
+      open l31
+   in
+      structure gs_237 = IntRedBlackSet
+   end
+   local
+      structure IntRedBlackSet = gs_237
+      gen/IntSet.sml
+   in
+      structure gs_238 = IntSet
+   end
+   local
+      structure Pickle = gs_142
+      structure TyName = gs_154
+      front/genty/EXN.sig
+   in
+      signature gs_239 = EXN
+   end
+   local
+      signature EXN = gs_239
+      structure Gen = gs_98
+      structure List = gs_4
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/genty/Exn.sml
+   in
+      structure gs_240 = Exn
+   end
+   local
+      structure Exn = gs_240
+      structure Pickle = gs_142
+      front/genty/EFFECT.sig
+   in
+      signature gs_241 = EFFECT
+   end
+   local
+      signature EFFECT = gs_241
+      structure Exn = gs_240
+      structure Gen = gs_98
+      structure Pickle = gs_142
+      structure Word = gs_14
+      front/genty/Effect.sml
+   in
+      structure gs_242 = Effect
+   end
+   local
+      signature ORD_MAP = gs_8
+      signature ORD_SET = gs_7
+      structure Pickle = gs_142
+      front/mil/VAR.sig
+   in
+      signature gs_243 = VAR
+   end
+   local
+      structure IntBinaryMap = gs_49
+      structure IntBinarySet = gs_48
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      signature VAR = gs_243
+      structure Word = gs_14
+      front/mil/Var.sml
+   in
+      structure gs_244 = Var
+   end
+   local
+      structure Effect = gs_242
+      structure Exn = gs_240
+      structure IntSet = gs_238
+      structure NewPretty = gs_71
+      signature ORD_MAP = gs_8
+      structure TyName = gs_154
+      structure Var = gs_244
+      front/milty/MILTY.sig
+   in
+      signature gs_245 = MILTY
+   end
+   local
+      structure Array = gs_50
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Eq = gs_146
+      structure Exn = gs_240
+      structure Gen = gs_98
+      structure Int = gs_16
+      structure IntSet = gs_238
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      signature MILTY = gs_245
+      functor MapFn = gs_73
+      structure NewPretty = gs_71
+      structure Pretty = gs_77
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure Var = gs_244
+      structure Word = gs_14
+      front/milty/MILTy.sml
+   in
+      structure gs_246 = MILTy
+   end
+   local
+      structure Env = gs_219
+      structure MILTy = gs_246
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/trans/TRANSTYPE.sig
+   in
+      signature gs_247 = TRANSTYPE
+   end
+   local
+      structure SourceMap = gs_62
+      structure Syntax = gs_57
+      parse/pre/PRINTLOC.sig
+   in
+      signature gs_248 = PRINTLOC
+   end
+   local
+      structure Int = gs_16
+      signature PRINTLOC = gs_248
+      structure SourceMap = gs_62
+      structure String = gs_3
+      parse/pre/PrintLoc.sml
+   in
+      structure gs_249 = PrintLoc
+   end
+   local
+      structure Syntax = gs_57
+      front/genty/Ext.sml
+   in
+      structure gs_250 = Ext
+   end
+   local
+      structure Constants = gs_131
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure InterOpTypes = gs_162
+      structure SCon = gs_56
+      structure SMLTy = gs_161
+      structure SourceMap = gs_62
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/sml/SMLTerm.sml
+   in
+      structure gs_251 = SMLTerm
+   end
+   local
+      structure Constants = gs_131
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure Longid = gs_112
+      structure MILTy = gs_246
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure Var = gs_244
+      structure Word8Vector = gs_13
+      front/mil/MILTerm.sml
+   in
+      structure gs_252 = MILTerm
+   end
+   local
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure Id = gs_90
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SMLTerm = gs_251
+      structure SourceMap = gs_62
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      structure Var = gs_244
+      front/trans/TRANSOPS.sig
+   in
+      signature gs_253 = TRANSOPS
+   end
+   local
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure Pickle = gs_142
+      front/genty/EXTOPS.sig
+   in
+      signature gs_254 = EXTOPS
+   end
+   local
+      structure Exn = gs_240
+      structure RuntimeNames = gs_91
+      structure TyName = gs_154
+      front/genty/Exns.sml
+   in
+      structure gs_255 = Exns
+   end
+   local
+      signature EXTOPS = gs_254
+      structure Effect = gs_242
+      structure Exns = gs_255
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure IdPickle = gs_143
+      structure Int = gs_16
+      structure Pickle = gs_142
+      structure StringMap = gs_74
+      structure Symbol = gs_53
+      front/genty/ExtOps.sml
+   in
+      structure gs_256 = ExtOps
+   end
+   local
+      structure Controls = gs_80
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/mil/MILTERMOPS.sig
+   in
+      signature gs_257 = MILTERMOPS
+   end
+   local
+      structure MILTy = gs_246
+      structure RuntimeNames = gs_91
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/milty/MILTys.sml
+   in
+      structure gs_258 = MILTys
+   end
+   local
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      signature MILTERMOPS = gs_257
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure Var = gs_244
+      front/mil/MILTermOps.sml
+   in
+      structure gs_259 = MILTermOps
+   end
+   local
+      structure Controls = gs_80
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure Ext = gs_250
+      structure ExtOps = gs_256
+      structure Id = gs_90
+      structure Int = gs_16
+      structure ListOps = gs_149
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure PrintLoc = gs_249
+      structure SMLTerm = gs_251
+      structure SourceMap = gs_62
+      structure String = gs_3
+      structure Symbol = gs_53
+      signature TRANSOPS = gs_253
+      structure TextIO = gs_84
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      structure Var = gs_244
+      front/trans/TransOps.sml
+   in
+      structure gs_260 = TransOps
+   end
+   local
+      structure Effect = gs_242
+      structure EnvOps = gs_233
+      structure Id = gs_90
+      structure ListOps = gs_149
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      signature TRANSTYPE = gs_247
+      structure TransOps = gs_260
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/trans/TransType.sml
+   in
+      structure gs_261 = TransType
+   end
+   local
+      structure Env = gs_219
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure TyName = gs_154
+      structure Var = gs_244
+      front/proj/UnitTypes.sml
+   in
+      structure gs_262 = UnitTypes
+   end
+   local
+      structure Entity = gs_150
+      structure UnitTypes = gs_262
+      front/proj/UNITMANAGER.sig
+   in
+      signature gs_263 = UNITMANAGER
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Pickle = gs_142
+      front/mil/MILPICKLE.sig
+   in
+      signature gs_264 = MILPICKLE
+   end
+   local
+      structure Constants = gs_131
+      structure Effect = gs_242
+      structure Exn = gs_240
+      structure ExtOps = gs_256
+      structure IdPickle = gs_143
+      structure Longid = gs_112
+      signature MILPICKLE = gs_264
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Pickle = gs_142
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure Var = gs_244
+      structure Word32 = gs_20
+      front/mil/MILPickle.sml
+   in
+      structure gs_265 = MILPickle
+   end
+   local
+      structure Controls = gs_80
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure EnvOps = gs_233
+      structure Id = gs_90
+      structure Int32 = gs_19
+      structure MILPickle = gs_265
+      structure MILTerm = gs_252
+      structure OS = gs_5
+      structure Pickle = gs_142
+      structure PrintManager = gs_86
+      structure RuntimeNames = gs_91
+      structure Time = gs_69
+      structure TyName = gs_154
+      signature UNITMANAGER = gs_263
+      structure UnitTypes = gs_262
+      structure Var = gs_244
+      structure Word8Vector = gs_13
+      front/proj/UnitManager.sml
+   in
+      structure gs_266 = UnitManager
+   end
+   local
+      structure Entity = gs_150
+      structure Env = gs_219
+      structure Longid = gs_112
+      front/sep/SEPCOMPENV.sig
+   in
+      signature gs_267 = SEPCOMPENV
+   end
+   local
+      structure Entity = gs_150
+      structure Env = gs_219
+      structure EnvOps = gs_233
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure Longid = gs_112
+      structure PackageManager = gs_167
+      signature SEPCOMPENV = gs_267
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TransInter = gs_225
+      structure TyStr = gs_216
+      structure UnitManager = gs_266
+      structure UnitTypes = gs_262
+      structure ValBind = gs_218
+      front/sep/SepCompEnv.sml
+   in
+      structure gs_268 = SepCompEnv
+   end
+   local
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure Symbol = gs_53
+      front/newcomp/CompileOps.sml
+   in
+      structure gs_269 = CompileOps
+   end
+   local
+      structure CompileOps = gs_269
+      structure Effect = gs_242
+      structure Entity = gs_150
+      structure EnvOps = gs_233
+      structure ErrorManager = gs_103
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure Longid = gs_112
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      signature PROCESSEXPORTS = gs_236
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure SMLPrimTy = gs_165
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure SepCompEnv = gs_268
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure TyStr = gs_216
+      structure UnitManager = gs_266
+      structure UnitTypes = gs_262
+      structure ValBind = gs_218
+      structure Var = gs_244
+      front/proj/ProcessExports.sml
+   in
+      structure gs_270 = ProcessExports
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/opt/Opt.sml
+   in
+      structure gs_271 = Opt
+   end
+   local
+      structure Controls = gs_80
+      structure Opt = gs_271
+      front/rewrite/SIMPLIFY.sig
+   in
+      signature gs_272 = SIMPLIFY
+   end
+   local
+      structure Constants = gs_131
+      structure Symbol = gs_53
+      front/rewrite/CONSTOPS.sig
+   in
+      signature gs_273 = CONSTOPS
+   end
+   local
+      signature CONSTOPS = gs_273
+      structure Constants = gs_131
+      structure Id = gs_90
+      structure Option = gs_106
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Symbol = gs_53
+      front/rewrite/ConstOps.sml
+   in
+      structure gs_274 = ConstOps
+   end
+   local
+      structure Controls = gs_80
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/rewrite/SIMPLIFYENV.sig
+   in
+      signature gs_275 = SIMPLIFYENV
+   end
+   local
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/milty/MILTYREP.sig
+   in
+      signature gs_276 = MILTYREP
+   end
+   local
+      structure Debug = gs_85
+      structure Exn = gs_240
+      structure Int = gs_16
+      structure List = gs_4
+      signature MILTYREP = gs_276
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Pretty = gs_77
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure Var = gs_244
+      front/milty/MILTyRep.sml
+   in
+      structure gs_277 = MILTyRep
+   end
+   local
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure List = gs_4
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/rewrite/SimplifyOps.sml
+   in
+      structure gs_278 = SimplifyOps
+   end
+   local
+      structure MILTerm = gs_252
+      signature ORD_MAP = gs_8
+      front/rewrite/COMMONVAL.sig
+   in
+      signature gs_279 = COMMONVAL
+   end
+   local
+      structure MILTerm = gs_252
+      structure NewPretty = gs_71
+      front/mil/MILPRETTY.sig
+   in
+      signature gs_280 = MILPRETTY
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/mil/CENSUS.sig
+   in
+      signature gs_281 = CENSUS
+   end
+   local
+      signature CENSUS = gs_281
+      structure DynIntArray = gs_60
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure Option = gs_106
+      structure Var = gs_244
+      front/mil/Census.sml
+   in
+      structure gs_282 = Census
+   end
+   local
+      structure Census = gs_282
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Ext = gs_250
+      structure ExtOps = gs_256
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      signature MILPRETTY = gs_280
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure NewPretty = gs_71
+      structure Symbol = gs_53
+      structure TextIO = gs_84
+      structure Var = gs_244
+      front/mil/MILPretty.sml
+   in
+      structure gs_283 = MILPretty
+   end
+   local
+      structure Constants = gs_131
+      structure Debug = gs_85
+      functor MapFn = gs_73
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure UString = gs_45
+      front/mil/CMap.sml
+   in
+      structure gs_284 = CMap
+   end
+   local
+      structure CMap = gs_284
+      signature COMMONVAL = gs_279
+      structure Compare = gs_110
+      structure Int = gs_16
+      structure List = gs_4
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      functor MapFn = gs_73
+      structure Var = gs_244
+      front/rewrite/CommonVal.sml
+   in
+      structure gs_285 = CommonVal
+   end
+   local
+      structure CommonVal = gs_285
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      signature SIMPLIFYENV = gs_275
+      structure SimplifyOps = gs_278
+      structure Var = gs_244
+      front/rewrite/SimplifyEnv.sml
+   in
+      structure gs_286 = SimplifyEnv
+   end
+   local
+      structure Controls = gs_80
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SimplifyEnv = gs_286
+      front/rewrite/SIMPLIFYATOM.sig
+   in
+      signature gs_287 = SIMPLIFYATOM
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      signature SIMPLIFYATOM = gs_287
+      structure SimplifyEnv = gs_286
+      structure Var = gs_244
+      front/rewrite/SimplifyAtom.sml
+   in
+      structure gs_288 = SimplifyAtom
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/mil/TYPECHECK.sig
+   in
+      signature gs_289 = TYPECHECK
+   end
+   local
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      structure NewPretty = gs_71
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      signature TYPECHECK = gs_289
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure Var = gs_244
+      front/mil/TypeCheck.sml
+   in
+      structure gs_290 = TypeCheck
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SimplifyEnv = gs_286
+      front/rewrite/SIMPLIFYVAL.sig
+   in
+      signature gs_291 = SIMPLIFYVAL
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure List = gs_4
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      signature SIMPLIFYVAL = gs_291
+      structure SimplifyAtom = gs_288
+      structure SimplifyEnv = gs_286
+      structure Var = gs_244
+      front/rewrite/SimplifyVal.sml
+   in
+      structure gs_292 = SimplifyVal
+   end
+   local
+      structure Census = gs_282
+      structure ConstOps = gs_274
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure PrintManager = gs_86
+      structure RTInt = gs_37
+      signature SIMPLIFY = gs_272
+      structure SimplifyAtom = gs_288
+      structure SimplifyEnv = gs_286
+      structure SimplifyOps = gs_278
+      structure SimplifyVal = gs_292
+      structure Symbol = gs_53
+      structure TypeCheck = gs_290
+      structure Var = gs_244
+      front/rewrite/Simplify.sml
+   in
+      structure gs_293 = Simplify
+   end
+   local
+      front/proj/TARGETMANAGER.sig
+   in
+      signature gs_294 = TARGETMANAGER
+   end
+   local
+      structure Char = gs_15
+      structure Commands = gs_79
+      structure FileOps = gs_97
+      structure OS = gs_5
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure String = gs_3
+      signature TARGETMANAGER = gs_294
+      front/proj/TargetManager.sml
+   in
+      structure gs_295 = TargetManager
+   end
+   local
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure IdPickle = gs_143
+      structure Int32 = gs_19
+      structure List = gs_4
+      structure Longid = gs_112
+      structure OS = gs_5
+      structure PackageManager = gs_167
+      structure Pickle = gs_142
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure SourceManager = gs_204
+      structure Syntax = gs_57
+      structure Time = gs_69
+      structure Word8Vector = gs_13
+      front/proj/BuildManager.sml
+   in
+      structure gs_296 = BuildManager
+   end
+   local
+      structure SyntaxDep = gs_235
+      front/sep/SEPCOMP.sig
+   in
+      signature gs_297 = SEPCOMP
+   end
+   local
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      front/sml/SMLTERMOPS.sig
+   in
+      signature gs_298 = SMLTERMOPS
+   end
+   local
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure Pretty = gs_77
+      structure SCon = gs_56
+      signature SMLTERMOPS = gs_298
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      front/sml/SMLTermOps.sml
+   in
+      structure gs_299 = SMLTermOps
+   end
+   local
+      structure Debug = gs_85
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure EnvOps = gs_233
+      structure MILTy = gs_246
+      structure Symbol = gs_53
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure UnitManager = gs_266
+      structure UnitTypes = gs_262
+      front/proj/UnitOps.sml
+   in
+      structure gs_300 = UnitOps
+   end
+   local
+      signature ORD_KEY = gs_9
+      common/graph/GRAPH.sig
+   in
+      signature gs_301 = GRAPH
+   end
+   local
+      signature GRAPH = gs_301
+      structure Int = gs_16
+      structure IntBinaryMap = gs_49
+      structure List = gs_4
+      common/graph/Graph.sml
+   in
+      structure gs_302 = Graph
+   end
+   local
+      structure Graph = gs_302
+      common/graph/STRONGCOMPONENTS.sig
+   in
+      signature gs_303 = STRONGCOMPONENTS
+   end
+   local
+      structure Graph = gs_302
+      structure Int = gs_16
+      structure List = gs_4
+      signature ORD_KEY = gs_9
+      signature STRONGCOMPONENTS = gs_303
+      functor SplaySetFn = gs_107
+      common/graph/StrongComponents.sml
+   in
+      structure gs_304 = StrongComponents
+   end
+   local
+      gen/DEP.sig
+   in
+      signature gs_305 = DEP
+   end
+   local
+      signature DEP = gs_305
+      structure Graph = gs_302
+      structure List = gs_4
+      structure StrongComponents = gs_304
+      gen/Dep.sml
+   in
+      structure gs_306 = Dep
+   end
+   local
+      structure Entity = gs_150
+      structure Error = gs_64
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SMLTerm = gs_251
+      structure SourceMap = gs_62
+      structure TransOps = gs_260
+      structure TyName = gs_154
+      structure Var = gs_244
+      front/trans/TRANS.sig
+   in
+      signature gs_307 = TRANS
+   end
+   local
+      structure Constants = gs_131
+      structure Debug = gs_85
+      structure MILTy = gs_246
+      structure Option = gs_106
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Real = gs_42
+      structure SCon = gs_56
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/trans/TransSCon.sml
+   in
+      structure gs_308 = TransSCon
+   end
+   local
+      structure MILTy = gs_246
+      front/trans/TransInterop.sml
+   in
+      structure gs_309 = TransInterop
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TransOps = gs_260
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      structure Var = gs_244
+      front/trans/VALPAT.sig
+   in
+      signature gs_310 = VALPAT
+   end
+   local
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure Option = gs_106
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TransOps = gs_260
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      signature VALPAT = gs_310
+      front/trans/ValPat.sml
+   in
+      structure gs_311 = ValPat
+   end
+   local
+      structure Entity = gs_150
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure SourceMap = gs_62
+      structure Syntax = gs_57
+      structure TransOps = gs_260
+      front/trans/PAT.sig
+   in
+      signature gs_312 = PAT
+   end
+   local
+      open l31
+   in
+      functor gs_313 = HashTableFn
+   end
+   local
+      open l31
+   in
+      signature gs_314 = MONO_HASH_TABLE
+   end
+   local
+      structure Id = gs_90
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/trans/PATPATH.sig
+   in
+      signature gs_315 = PATPATH
+   end
+   local
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Eq = gs_146
+      structure Ext = gs_250
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      signature PATPATH = gs_315
+      structure Pretty = gs_77
+      structure TransOps = gs_260
+      structure Var = gs_244
+      front/trans/PatPath.sml
+   in
+      structure gs_316 = PatPath
+   end
+   local
+      structure Constants = gs_131
+      structure Int = gs_16
+      structure MILTy = gs_246
+      structure TyName = gs_154
+      front/trans/PatCon.sml
+   in
+      structure gs_317 = PatCon
+   end
+   local
+      structure IntSet = gs_238
+      structure MILTerm = gs_252
+      signature MONO_HASH_TABLE = gs_314
+      structure PatCon = gs_317
+      structure PatPath = gs_316
+      structure Symbol = gs_53
+      front/trans/PATDEC.sig
+   in
+      signature gs_318 = PATDEC
+   end
+   local
+      structure Debug = gs_85
+      structure Eq = gs_146
+      functor HashTableFn = gs_313
+      structure Id = gs_90
+      structure Int = gs_16
+      structure IntSet = gs_238
+      structure MILTerm = gs_252
+      signature PATDEC = gs_318
+      structure PatCon = gs_317
+      structure PatPath = gs_316
+      structure Pretty = gs_77
+      structure Symbol = gs_53
+      structure TransOps = gs_260
+      structure Var = gs_244
+      structure Word = gs_14
+      front/trans/PatDec.sml
+   in
+      structure gs_319 = PatDec
+   end
+   local
+      structure MILTy = gs_246
+      structure PatDec = gs_319
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      front/trans/PATDECCOMP.sig
+   in
+      signature gs_320 = PATDECCOMP
+   end
+   local
+      structure Debug = gs_85
+      structure List = gs_4
+      structure PatCon = gs_317
+      front/trans/PatDescr.sml
+   in
+      structure gs_321 = PatDescr
+   end
+   local
+      structure Debug = gs_85
+      structure Error = gs_64
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure Option = gs_106
+      signature PATDECCOMP = gs_320
+      structure PatCon = gs_317
+      structure PatDec = gs_319
+      structure PatDescr = gs_321
+      structure PatPath = gs_316
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TransOps = gs_260
+      structure TransSCon = gs_308
+      front/trans/PatDecComp.sml
+   in
+      structure gs_322 = PatDecComp
+   end
+   local
+      structure Debug = gs_85
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure SMLTerm = gs_251
+      front/trans/PatOrs.sml
+   in
+      structure gs_323 = PatOrs
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Error = gs_64
+      structure Exn = gs_240
+      structure Ext = gs_250
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure IntSet = gs_238
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      signature PAT = gs_312
+      structure PatCon = gs_317
+      structure PatDec = gs_319
+      structure PatDecComp = gs_322
+      structure PatDescr = gs_321
+      structure PatOrs = gs_323
+      structure PatPath = gs_316
+      structure SMLPrimTy = gs_165
+      structure SMLTerm = gs_251
+      structure SMLTermOps = gs_299
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TransOps = gs_260
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/trans/Pat.sml
+   in
+      structure gs_324 = Pat
+   end
+   local
+      structure Constants = gs_131
+      structure Debug = gs_85
+      structure Dep = gs_306
+      structure Effect = gs_242
+      structure Error = gs_64
+      structure Exn = gs_240
+      structure Ext = gs_250
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure Int = gs_16
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure OptionOps = gs_222
+      structure Pat = gs_324
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure RuntimeNames = gs_91
+      structure SMLPrimTy = gs_165
+      structure SMLTerm = gs_251
+      structure SMLTermOps = gs_299
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      signature TRANS = gs_307
+      structure TransInterop = gs_309
+      structure TransOps = gs_260
+      structure TransSCon = gs_308
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      structure UString = gs_45
+      structure ValPat = gs_311
+      structure Var = gs_244
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      front/trans/Trans.sml
+   in
+      structure gs_325 = Trans
+   end
+   local
+      structure Env = gs_219
+      structure MILTy = gs_246
+      structure TyName = gs_154
+      structure UnitTypes = gs_262
+      front/sep/SEPPRIM.sig
+   in
+      signature gs_326 = SEPPRIM
+   end
+   local
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure EnvOps = gs_233
+      structure Ext = gs_250
+      structure ExtOps = gs_256
+      structure Id = gs_90
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      signature SEPPRIM = gs_326
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TransOps = gs_260
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure TyVar = gs_156
+      structure UnitTypes = gs_262
+      structure ValBind = gs_218
+      structure Var = gs_244
+      front/sep/SepPrim.sml
+   in
+      structure gs_327 = SepPrim
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Opt = gs_271
+      structure Var = gs_244
+      front/opt/OPTS.sig
+   in
+      signature gs_328 = OPTS
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure List = gs_4
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      signature OPTS = gs_328
+      structure Opt = gs_271
+      structure PrintManager = gs_86
+      structure Simplify = gs_293
+      structure StringMap = gs_74
+      structure TypeCheck = gs_290
+      structure Var = gs_244
+      front/opt/Opts.sml
+   in
+      structure gs_329 = Opts
+   end
+   local
+      structure Env = gs_219
+      structure Error = gs_64
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      front/smlelab/ELAB.sig
+   in
+      signature gs_330 = ELAB
+   end
+   local
+      structure Env = gs_219
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyStr = gs_216
+      structure ValBind = gs_218
+      front/smlenv/ENVLOOKUP.sig
+   in
+      signature gs_331 = ENVLOOKUP
+   end
+   local
+      structure Debug = gs_85
+      signature ENVLOOKUP = gs_331
+      structure ElabState = gs_230
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Id = gs_90
+      structure Longid = gs_112
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure ValBind = gs_218
+      front/smlenv/EnvLookup.sml
+   in
+      structure gs_332 = EnvLookup
+   end
+   local
+      open l31
+   in
+      structure gs_333 = LibBase
+   end
+   local
+      signature ORD_KEY = gs_9
+      common/graph/PARTITION.sig
+   in
+      signature gs_334 = PARTITION
+   end
+   local
+      structure LibBase = gs_333
+      structure List = gs_4
+      signature ORD_MAP = gs_8
+      signature PARTITION = gs_334
+      common/graph/Partition.sml
+   in
+      functor gs_335 = Partition
+   end
+   local
+      structure InterOpTypes = gs_162
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      front/smlelab/TYCONSTRAINT.sig
+   in
+      signature gs_336 = TYCONSTRAINT
+   end
+   local
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyVar = gs_156
+      front/smlty/SMLTYUNIFY.sig
+   in
+      signature gs_337 = SMLTYUNIFY
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure ElabState = gs_230
+      structure Eq = gs_146
+      structure Error = gs_64
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure PrintManager = gs_86
+      signature SMLTYUNIFY = gs_337
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      front/smlty/SMLTyUnify.sml
+   in
+      structure gs_338 = SMLTyUnify
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure ElabState = gs_230
+      structure Eq = gs_146
+      structure Error = gs_64
+      structure Id = gs_90
+      structure IntMap = gs_136
+      structure InterOp = gs_226
+      structure InterOpTypes = gs_162
+      structure List = gs_4
+      structure ListPair = gs_144
+      functor Partition = gs_335
+      structure Pretty = gs_77
+      structure SMLPrimTy = gs_165
+      structure SMLTy = gs_161
+      structure SMLTyUnify = gs_338
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      signature TYCONSTRAINT = gs_336
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure TyVar = gs_156
+      front/smlelab/TyConstraint.sml
+   in
+      structure gs_339 = TyConstraint
+   end
+   local
+      structure Env = gs_219
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      front/smlelab/MATCH.sig
+   in
+      signature gs_340 = MATCH
+   end
+   local
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      front/smlelab/ELABCHECK.sig
+   in
+      signature gs_341 = ELABCHECK
+   end
+   local
+      structure SMLTerm = gs_251
+      front/smlelab/ELABCHECKCLASS.sig
+   in
+      signature gs_342 = ELABCHECKCLASS
+   end
+   local
+      structure Debug = gs_85
+      structure Dups = gs_207
+      signature ELABCHECKCLASS = gs_342
+      structure ElabState = gs_230
+      structure Eq = gs_146
+      structure Error = gs_64
+      structure Id = gs_90
+      structure IntMap = gs_136
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure Option = gs_106
+      structure Pretty = gs_77
+      structure SMLPrimTy = gs_165
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/smlelab/ElabCheckClass.sml
+   in
+      structure gs_343 = ElabCheckClass
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      signature ELABCHECK = gs_341
+      structure ElabCheckClass = gs_343
+      structure ElabState = gs_230
+      structure Error = gs_64
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure InterOpTypes = gs_162
+      structure List = gs_4
+      structure OptionOps = gs_222
+      structure SMLTerm = gs_251
+      structure SMLTermOps = gs_299
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      front/smlelab/ElabCheck.sml
+   in
+      structure gs_344 = ElabCheck
+   end
+   local
+      structure ElabCheck = gs_344
+      structure ElabState = gs_230
+      structure Env = gs_219
+      structure EnvLookup = gs_332
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Ext = gs_250
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      signature MATCH = gs_340
+      structure Option = gs_106
+      structure Result = gs_96
+      structure SMLSch = gs_217
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure SMLTyUnify = gs_338
+      structure Symbol = gs_53
+      structure TyConstraint = gs_339
+      structure TyName = gs_154
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlelab/Match.sml
+   in
+      structure gs_345 = Match
+   end
+   local
+      structure Env = gs_219
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      front/smlelab/ELABCORE.sig
+   in
+      signature gs_346 = ELABCORE
+   end
+   local
+      structure ElabState = gs_230
+      structure IntConvFlags = gs_23
+      structure SCon = gs_56
+      structure SMLPrimTy = gs_165
+      structure SMLTy = gs_161
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyVar = gs_156
+      front/smlelab/ElabSCon.sml
+   in
+      structure gs_347 = ElabSCon
+   end
+   local
+      structure Env = gs_219
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      front/smlelab/ELABPAT.sig
+   in
+      signature gs_348 = ELABPAT
+   end
+   local
+      structure Env = gs_219
+      structure SMLTy = gs_161
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      front/smlelab/ELABTY.sig
+   in
+      signature gs_349 = ELABTY
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Dep = gs_306
+      signature ELABTY = gs_349
+      structure ElabCheck = gs_344
+      structure ElabState = gs_230
+      structure Env = gs_219
+      structure EnvLookup = gs_332
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      structure Option = gs_106
+      structure SMLSch = gs_217
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyName = gs_154
+      structure TySort = gs_148
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlelab/ElabTy.sml
+   in
+      structure gs_350 = ElabTy
+   end
+   local
+      structure Env = gs_219
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      front/smlelab/ELABOPS.sig
+   in
+      signature gs_351 = ELABOPS
+   end
+   local
+      signature ELABOPS = gs_351
+      structure ElabState = gs_230
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Id = gs_90
+      structure Int = gs_16
+      structure SMLPrimTy = gs_165
+      structure SMLSch = gs_217
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TopEnv = gs_234
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlelab/ElabOps.sml
+   in
+      structure gs_352 = ElabOps
+   end
+   local
+      signature ELABPAT = gs_348
+      structure ElabOps = gs_352
+      structure ElabSCon = gs_347
+      structure ElabState = gs_230
+      structure ElabTy = gs_350
+      structure Env = gs_219
+      structure EnvLookup = gs_332
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Gen = gs_98
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure Longid = gs_112
+      structure SMLPrimTy = gs_165
+      structure SMLSchOps = gs_231
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure SMLTyUnify = gs_338
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TyConstraint = gs_339
+      structure UString = gs_45
+      structure ValBind = gs_218
+      front/smlelab/ElabPat.sml
+   in
+      structure gs_353 = ElabPat
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      signature ELABCORE = gs_346
+      structure Effect = gs_242
+      structure ElabCheck = gs_344
+      structure ElabOps = gs_352
+      structure ElabPat = gs_353
+      structure ElabSCon = gs_347
+      structure ElabState = gs_230
+      structure ElabTy = gs_350
+      structure Env = gs_219
+      structure EnvLookup = gs_332
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Ext = gs_250
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure InterOp = gs_226
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      structure Option = gs_106
+      structure Pretty = gs_77
+      structure SMLPrimTy = gs_165
+      structure SMLSch = gs_217
+      structure SMLSchOps = gs_231
+      structure SMLTerm = gs_251
+      structure SMLTermOps = gs_299
+      structure SMLTy = gs_161
+      structure SMLTyUnify = gs_338
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure TopEnv = gs_234
+      structure TyConstraint = gs_339
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TySort = gs_148
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure UString = gs_45
+      structure ValBind = gs_218
+      front/smlelab/ElabCore.sml
+   in
+      structure gs_354 = ElabCore
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      signature ELAB = gs_330
+      structure ElabCheck = gs_344
+      structure ElabCore = gs_354
+      structure ElabOps = gs_352
+      structure ElabPat = gs_353
+      structure ElabState = gs_230
+      structure ElabTy = gs_350
+      structure Entity = gs_150
+      structure Env = gs_219
+      structure EnvLookup = gs_332
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Longid = gs_112
+      structure Match = gs_345
+      structure Option = gs_106
+      structure ParseManager = gs_203
+      structure SMLPrimTy = gs_165
+      structure SMLSch = gs_217
+      structure SMLSchOps = gs_231
+      structure SMLTerm = gs_251
+      structure SMLTy = gs_161
+      structure SMLTyUnify = gs_338
+      structure SourceManager = gs_204
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure SyntaxCheck = gs_174
+      structure TyConstraint = gs_339
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TySort = gs_148
+      structure TyStr = gs_216
+      structure TyVar = gs_156
+      structure ValBind = gs_218
+      front/smlelab/Elab.sml
+   in
+      structure gs_355 = Elab
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Elab = gs_355
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      structure EnvOps = gs_233
+      structure Error = gs_64
+      structure ErrorManager = gs_103
+      structure Id = gs_90
+      structure List = gs_4
+      structure MILTy = gs_246
+      structure Opts = gs_329
+      structure ParseManager = gs_203
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      signature SEPCOMP = gs_297
+      structure SMLTermOps = gs_299
+      structure SMLTy = gs_161
+      structure SepCompEnv = gs_268
+      structure SepPrim = gs_327
+      structure SourceManager = gs_204
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      structure SyntaxCheck = gs_174
+      structure TopEnv = gs_234
+      structure Trans = gs_325
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure UnitManager = gs_266
+      structure UnitOps = gs_300
+      structure UnitTypes = gs_262
+      structure Var = gs_244
+      front/sep/SepComp.sml
+   in
+      structure gs_356 = SepComp
+   end
+   local
+      open l31
+   in
+      functor gs_357 = DynamicArrayFn
+   end
+   local
+      open l31
+   in
+      functor gs_358 = MonoArrayFn
+   end
+   local
+      structure Effect = gs_242
+      structure IntMap = gs_136
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/clos/ClosConvTypes.sml
+   in
+      structure gs_359 = ClosConvTypes
+   end
+   local
+      structure ClosConvTypes = gs_359
+      structure MILTerm = gs_252
+      front/clos/CLOSCONV.sig
+   in
+      signature gs_360 = CLOSCONV
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/clos/FUNFLOW.sig
+   in
+      signature gs_361 = FUNFLOW
+   end
+   local
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/clos/FreeVarsEnv.sml
+   in
+      structure gs_362 = FreeVarsEnv
+   end
+   local
+      structure Controls = gs_80
+      structure Eq = gs_146
+      structure Ext = gs_250
+      signature FUNFLOW = gs_361
+      structure FreeVarsEnv = gs_362
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      structure NewPretty = gs_71
+      structure Option = gs_106
+      functor Partition = gs_335
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/clos/FunFlow.sml
+   in
+      structure gs_363 = FunFlow
+   end
+   local
+      structure ClosConvTypes = gs_359
+      front/clos/CLOSCONVCHECK.sig
+   in
+      signature gs_364 = CLOSCONVCHECK
+   end
+   local
+      signature CLOSCONVCHECK = gs_364
+      structure Census = gs_282
+      structure ClosConvTypes = gs_359
+      structure Controls = gs_80
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure PrintManager = gs_86
+      structure TypeCheck = gs_290
+      structure Var = gs_244
+      front/clos/ClosConvCheck.sml
+   in
+      structure gs_365 = ClosConvCheck
+   end
+   local
+      structure MILTerm = gs_252
+      structure Var = gs_244
+      front/clos/GLOBALINFO.sig
+   in
+      signature gs_366 = GLOBALINFO
+   end
+   local
+      structure Controls = gs_80
+      structure FunFlow = gs_363
+      signature GLOBALINFO = gs_366
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure Var = gs_244
+      front/clos/GlobalInfo.sml
+   in
+      structure gs_367 = GlobalInfo
+   end
+   local
+      structure ClosConvTypes = gs_359
+      front/clos/CLOSCONVPRETTY.sig
+   in
+      signature gs_368 = CLOSCONVPRETTY
+   end
+   local
+      signature CLOSCONVPRETTY = gs_368
+      structure ClosConvTypes = gs_359
+      structure Debug = gs_85
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure NewPretty = gs_71
+      structure Var = gs_244
+      front/clos/ClosConvPretty.sml
+   in
+      structure gs_369 = ClosConvPretty
+   end
+   local
+      env/STATS.sig
+   in
+      signature gs_370 = STATS
+   end
+   local
+      structure Debug = gs_85
+      structure Int = gs_16
+      structure IntMap = gs_136
+      signature STATS = gs_370
+      structure StringMap = gs_74
+      env/Stats.sml
+   in
+      structure gs_371 = Stats
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Pretty = gs_77
+      structure Var = gs_244
+      front/clos/FreeVarsInfo.sml
+   in
+      structure gs_372 = FreeVarsInfo
+   end
+   local
+      structure Effect = gs_242
+      structure FreeVarsInfo = gs_372
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/clos/FREEVARS.sig
+   in
+      signature gs_373 = FREEVARS
+   end
+   local
+      structure Controls = gs_80
+      structure Effect = gs_242
+      signature FREEVARS = gs_373
+      structure FreeVarsEnv = gs_362
+      structure FreeVarsInfo = gs_372
+      structure FunFlow = gs_363
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/clos/FreeVars.sml
+   in
+      structure gs_374 = FreeVars
+   end
+   local
+      structure Census = gs_282
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/clos/ClosEnv.sml
+   in
+      structure gs_375 = ClosEnv
+   end
+   local
+      signature CLOSCONV = gs_360
+      structure Census = gs_282
+      structure ClosConvCheck = gs_365
+      structure ClosConvPretty = gs_369
+      structure ClosConvTypes = gs_359
+      structure ClosEnv = gs_375
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      functor DynamicArrayFn = gs_357
+      structure Effect = gs_242
+      structure Eq = gs_146
+      structure Ext = gs_250
+      structure FreeVars = gs_374
+      structure FreeVarsInfo = gs_372
+      structure FunFlow = gs_363
+      structure GlobalInfo = gs_367
+      structure Id = gs_90
+      structure IntMap = gs_136
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      functor MonoArrayFn = gs_358
+      structure Option = gs_106
+      structure PrintManager = gs_86
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure Stats = gs_371
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/clos/ClosConv.sml
+   in
+      structure gs_376 = ClosConv
+   end
+   local
+      structure ClosConvTypes = gs_359
+      structure Controls = gs_80
+      structure Longid = gs_112
+      structure TyName = gs_154
+      front/newcomp/COMPILEALL.sig
+   in
+      signature gs_377 = COMPILEALL
+   end
+   local
+      structure Int = gs_16
+      structure Pretty = gs_77
+      structure TyName = gs_154
+      front/newcomp/VMTy.sml
+   in
+      structure gs_378 = VMTy
+   end
+   local
+      structure Var = gs_244
+      front/newcomp/RTLABELS.sig
+   in
+      signature gs_379 = RTLABELS
+   end
+   local
+      structure Int = gs_16
+      signature RTLABELS = gs_379
+      structure Var = gs_244
+      front/newcomp/RTLabels.sml
+   in
+      structure gs_380 = RTLabels
+   end
+   local
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure OS = gs_5
+      structure RTLabels = gs_380
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure StringMap = gs_74
+      structure TargetManager = gs_295
+      structure TextIO = gs_84
+      structure TyName = gs_154
+      structure VMTy = gs_378
+      front/newcomp/RTInstrs.sml
+   in
+      structure gs_381 = RTInstrs
+   end
+   local
+      structure Id = gs_90
+      structure Longid = gs_112
+      structure MILTerm = gs_252
+      structure RTInstrs = gs_381
+      structure Symbol = gs_53
+      structure VMTy = gs_378
+      structure Word8Vector = gs_13
+      front/newcomp/RTResult.sml
+   in
+      structure gs_382 = RTResult
+   end
+   local
+      structure IntMap = gs_136
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure RTInstrs = gs_381
+      structure Var = gs_244
+      front/newcomp/CompileEnv.sml
+   in
+      structure gs_383 = CompileEnv
+   end
+   local
+      structure CompileEnv = gs_383
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure RTResult = gs_382
+      structure Var = gs_244
+      front/newcomp/COMPILEGLOBALS.sig
+   in
+      signature gs_384 = COMPILEGLOBALS
+   end
+   local
+      structure MILTerm = gs_252
+      structure RTInstrs = gs_381
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/RTLOCALS.sig
+   in
+      signature gs_385 = RTLOCALS
+   end
+   local
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure VMTy = gs_378
+      front/newcomp/RTOps.sml
+   in
+      structure gs_386 = RTOps
+   end
+   local
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure List = gs_4
+      structure MILTerm = gs_252
+      structure RTInstrs = gs_381
+      signature RTLOCALS = gs_385
+      structure RTOps = gs_386
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/RTLocals.sml
+   in
+      structure gs_387 = RTLocals
+   end
+   local
+      structure Constants = gs_131
+      structure RTInstrs = gs_381
+      structure RTLabels = gs_380
+      front/newcomp/RTPeephole.sml
+   in
+      structure gs_388 = RTPeephole
+   end
+   local
+      structure Controls = gs_80
+      structure Effect = gs_242
+      structure MILTerm = gs_252
+      structure Var = gs_244
+      front/newcomp/LIVENESS.sig
+   in
+      signature gs_389 = LIVENESS
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      signature LIVENESS = gs_389
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure Option = gs_106
+      structure Pretty = gs_77
+      structure Stats = gs_371
+      structure Var = gs_244
+      front/newcomp/Liveness.sml
+   in
+      structure gs_390 = Liveness
+   end
+   local
+      structure CompileEnv = gs_383
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure RTInstrs = gs_381
+      front/newcomp/COMPILECONT.sig
+   in
+      signature gs_391 = COMPILECONT
+   end
+   local
+      structure Controls = gs_80
+      structure RTResult = gs_382
+      structure VMTy = gs_378
+      front/newcomp/COMPILEEXCEPTION.sig
+   in
+      signature gs_392 = COMPILEEXCEPTION
+   end
+   local
+      structure CompileEnv = gs_383
+      structure CompileOps = gs_269
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLabels = gs_380
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure String = gs_3
+      structure TyName = gs_154
+      structure UString = gs_45
+      structure VMTy = gs_378
+      front/newcomp/CompileFixedOps.sml
+   in
+      structure gs_393 = CompileFixedOps
+   end
+   local
+      signature COMPILEEXCEPTION = gs_392
+      structure CompileEnv = gs_383
+      structure CompileFixedOps = gs_393
+      structure CompileOps = gs_269
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure RTInstrs = gs_381
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure UString = gs_45
+      structure VMTy = gs_378
+      front/newcomp/CompileException.sml
+   in
+      structure gs_394 = CompileException
+   end
+   local
+      structure RTResult = gs_382
+      structure Syntax = gs_57
+      structure VMTy = gs_378
+      front/newcomp/COMPILEPRODSUM.sig
+   in
+      signature gs_395 = COMPILEPRODSUM
+   end
+   local
+      signature COMPILEPRODSUM = gs_395
+      structure CompileFixedOps = gs_393
+      structure CompileOps = gs_269
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      front/newcomp/CompileProdSum.sml
+   in
+      structure gs_396 = CompileProdSum
+   end
+   local
+      structure CompileOps = gs_269
+      structure CompileProdSum = gs_396
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure MILTy = gs_246
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTOps = gs_386
+      structure RTResult = gs_382
+      structure Symbol = gs_53
+      structure VMTy = gs_378
+      front/newcomp/SumRep.sml
+   in
+      structure gs_397 = SumRep
+   end
+   local
+      structure Ext = gs_250
+      structure MILTy = gs_246
+      structure RTInstrs = gs_381
+      structure Syntax = gs_57
+      structure VMTy = gs_378
+      front/newcomp/COMPILESPECIAL.sig
+   in
+      signature gs_398 = COMPILESPECIAL
+   end
+   local
+      structure CompileEnv = gs_383
+      structure Controls = gs_80
+      structure Longid = gs_112
+      structure MILTy = gs_246
+      structure RTResult = gs_382
+      structure TyName = gs_154
+      structure VMTy = gs_378
+      front/newcomp/TYREP.sig
+   in
+      signature gs_399 = TYREP
+   end
+   local
+      structure CompileEnv = gs_383
+      structure CompileOps = gs_269
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure Int = gs_16
+      structure ListOps = gs_149
+      structure RTInstrs = gs_381
+      structure RTOps = gs_386
+      structure RTResult = gs_382
+      structure Symbol = gs_53
+      structure TyName = gs_154
+      structure VMTy = gs_378
+      front/newcomp/StaticNewObj.sml
+   in
+      structure gs_400 = StaticNewObj
+   end
+   local
+      structure CompileEnv = gs_383
+      structure CompileException = gs_394
+      structure CompileProdSum = gs_396
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Exn = gs_240
+      structure Id = gs_90
+      structure Int = gs_16
+      structure IntSet = gs_238
+      structure List = gs_4
+      structure Longid = gs_112
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      functor MapFn = gs_73
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RTOps = gs_386
+      structure RTResult = gs_382
+      structure RepNames = gs_159
+      structure StaticNewObj = gs_400
+      structure String = gs_3
+      structure StringMap = gs_74
+      structure SumRep = gs_397
+      signature TYREP = gs_399
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/TyRep.sml
+   in
+      structure gs_401 = TyRep
+   end
+   local
+      signature COMPILESPECIAL = gs_398
+      structure CompileEnv = gs_383
+      structure Constants = gs_131
+      structure Debug = gs_85
+      structure Ext = gs_250
+      structure ExtOps = gs_256
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLocals = gs_387
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      structure StaticNewObj = gs_400
+      structure Symbol = gs_53
+      structure TyRep = gs_401
+      structure VMTy = gs_378
+      front/newcomp/CompileSpecial.sml
+   in
+      structure gs_402 = CompileSpecial
+   end
+   local
+      structure MILTerm = gs_252
+      structure Var = gs_244
+      front/newcomp/RTSYMBOLS.sig
+   in
+      signature gs_403 = RTSYMBOLS
+   end
+   local
+      structure General = gs_196
+      structure Longid = gs_112
+      structure MILTerm = gs_252
+      signature RTSYMBOLS = gs_403
+      structure StringSet = gs_206
+      structure Var = gs_244
+      front/newcomp/RTSymbols.sml
+   in
+      structure gs_404 = RTSymbols
+   end
+   local
+      structure CompileEnv = gs_383
+      structure MILTy = gs_246
+      structure RTInstrs = gs_381
+      structure RTResult = gs_382
+      front/newcomp/COMPILEONEPLUS.sig
+   in
+      signature gs_405 = COMPILEONEPLUS
+   end
+   local
+      signature COMPILEONEPLUS = gs_405
+      structure CompileEnv = gs_383
+      structure CompileFixedOps = gs_393
+      structure CompileOps = gs_269
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      functor MapFn = gs_73
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      structure StaticNewObj = gs_400
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure TyRep = gs_401
+      structure UString = gs_45
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/CompileOnePlus.sml
+   in
+      structure gs_406 = CompileOnePlus
+   end
+   local
+      structure Census = gs_282
+      structure CompileEnv = gs_383
+      structure CompileException = gs_394
+      structure CompileFixedOps = gs_393
+      structure CompileOnePlus = gs_406
+      structure CompileOps = gs_269
+      structure CompileSpecial = gs_402
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Exn = gs_240
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure Int = gs_16
+      structure IntMap = gs_136
+      structure IntSet = gs_238
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure Liveness = gs_390
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure OptionOps = gs_222
+      structure RTInstrs = gs_381
+      structure RTLocals = gs_387
+      structure RTOps = gs_386
+      structure RTSymbols = gs_404
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure StaticNewObj = gs_400
+      structure Stats = gs_371
+      structure SumRep = gs_397
+      structure TyName = gs_154
+      structure TyRep = gs_401
+      structure UString = gs_45
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/CompileValCmp.sml
+   in
+      structure gs_407 = CompileValCmp
+   end
+   local
+      signature COMPILECONT = gs_391
+      structure Census = gs_282
+      structure CompileEnv = gs_383
+      structure CompileException = gs_394
+      structure CompileOps = gs_269
+      structure CompileValCmp = gs_407
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Int = gs_16
+      structure Int32 = gs_19
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure QuickSort = gs_89
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLabels = gs_380
+      structure RTLocals = gs_387
+      structure RTOps = gs_386
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure Stats = gs_371
+      structure SumRep = gs_397
+      structure TyRep = gs_401
+      structure UString = gs_45
+      structure VMTy = gs_378
+      structure Var = gs_244
+      front/newcomp/CompileCont.sml
+   in
+      structure gs_408 = CompileCont
+   end
+   local
+      structure CompileCont = gs_408
+      structure CompileEnv = gs_383
+      structure CompileOps = gs_269
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure Liveness = gs_390
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure OptionOps = gs_222
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RTInstrs = gs_381
+      structure RTLocals = gs_387
+      structure RTOps = gs_386
+      structure RTPeephole = gs_388
+      structure RTResult = gs_382
+      structure RepNames = gs_159
+      structure StaticNewObj = gs_400
+      structure Stats = gs_371
+      structure Symbol = gs_53
+      structure TyRep = gs_401
+      structure Var = gs_244
+      front/newcomp/CompileMethod.sml
+   in
+      structure gs_409 = CompileMethod
+   end
+   local
+      signature COMPILEGLOBALS = gs_384
+      structure CompileEnv = gs_383
+      structure CompileMethod = gs_409
+      structure CompileOnePlus = gs_406
+      structure CompileOps = gs_269
+      structure Id = gs_90
+      structure Int = gs_16
+      structure MILTerm = gs_252
+      structure PrintManager = gs_86
+      structure RTInstrs = gs_381
+      structure RTOps = gs_386
+      structure RTResult = gs_382
+      structure RTSymbols = gs_404
+      structure RepNames = gs_159
+      structure RuntimeNames = gs_91
+      structure Symbol = gs_53
+      structure TyRep = gs_401
+      structure Var = gs_244
+      front/newcomp/CompileGlobals.sml
+   in
+      structure gs_410 = CompileGlobals
+   end
+   local
+      structure RTResult = gs_382
+      front/newcomp/RTEMIT.sig
+   in
+      signature gs_411 = RTEMIT
+   end
+   local
+      structure Id = gs_90
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure UString = gs_45
+      front/newcomp/RTASSEMOPS.sig
+   in
+      signature gs_412 = RTASSEMOPS
+   end
+   local
+      structure Char = gs_15
+      structure CharVector = gs_25
+      structure Id = gs_90
+      signature RTASSEMOPS = gs_412
+      structure RTDouble = gs_119
+      structure RTFloat = gs_125
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLong = gs_129
+      structure Real = gs_42
+      structure String = gs_3
+      structure UString = gs_45
+      structure Word32 = gs_20
+      front/newcomp/RTAssemOps.sml
+   in
+      structure gs_413 = RTAssemOps
+   end
+   local
+      structure Char = gs_15
+      structure Commands = gs_79
+      structure CompileOps = gs_269
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure Longid = gs_112
+      structure OS = gs_5
+      structure PackageManager = gs_167
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure RTAssemOps = gs_413
+      signature RTEMIT = gs_411
+      structure RTInstrs = gs_381
+      structure RTInt = gs_37
+      structure RTLabels = gs_380
+      structure RTResult = gs_382
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure Stats = gs_371
+      structure Symbol = gs_53
+      structure TargetManager = gs_295
+      structure TextIO = gs_84
+      structure TyName = gs_154
+      structure TyNames = gs_160
+      structure VMTy = gs_378
+      structure Var = gs_244
+      structure Word8 = gs_12
+      structure Word8Vector = gs_13
+      front/newcomp/RTAssem.sml
+   in
+      structure gs_414 = RTAssem
+   end
+   local
+      structure CompileEnv = gs_383
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure RTResult = gs_382
+      front/newcomp/COMPILECLASSTYPE.sig
+   in
+      signature gs_415 = COMPILECLASSTYPE
+   end
+   local
+      signature COMPILECLASSTYPE = gs_415
+      structure CompileEnv = gs_383
+      structure CompileMethod = gs_409
+      structure Id = gs_90
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure Option = gs_106
+      structure QuickSort = gs_89
+      structure RTInstrs = gs_381
+      structure RTOps = gs_386
+      structure RTResult = gs_382
+      structure Symbol = gs_53
+      structure TyRep = gs_401
+      structure VMTy = gs_378
+      front/newcomp/CompileClassType.sml
+   in
+      structure gs_416 = CompileClassType
+   end
+   local
+      structure ClosConvTypes = gs_359
+      structure CompileEnv = gs_383
+      structure MILTy = gs_246
+      structure RTResult = gs_382
+      front/newcomp/COMPILECLOSURE.sig
+   in
+      signature gs_417 = COMPILECLOSURE
+   end
+   local
+      signature COMPILECLOSURE = gs_417
+      structure CompileEnv = gs_383
+      structure CompileFixedOps = gs_393
+      structure CompileMethod = gs_409
+      structure CompileOps = gs_269
+      structure Controls = gs_80
+      structure Id = gs_90
+      structure IntMap = gs_136
+      structure ListOps = gs_149
+      structure MILTy = gs_246
+      structure Option = gs_106
+      structure OptionOps = gs_222
+      structure RTInstrs = gs_381
+      structure RTOps = gs_386
+      structure RTSymbols = gs_404
+      structure RepNames = gs_159
+      structure TyRep = gs_401
+      front/newcomp/CompileClosure.sml
+   in
+      structure gs_418 = CompileClosure
+   end
+   local
+      signature COMPILEALL = gs_377
+      structure CompileClassType = gs_416
+      structure CompileClosure = gs_418
+      structure CompileEnv = gs_383
+      structure CompileGlobals = gs_410
+      structure CompileOnePlus = gs_406
+      structure Controls = gs_80
+      structure Env = gs_219
+      structure Id = gs_90
+      structure ListOps = gs_149
+      structure Liveness = gs_390
+      structure MILTy = gs_246
+      structure PrintManager = gs_86
+      structure RTAssem = gs_414
+      structure RTInstrs = gs_381
+      structure RTSymbols = gs_404
+      structure Stats = gs_371
+      structure TyRep = gs_401
+      structure Var = gs_244
+      front/newcomp/CompileAll.sml
+   in
+      structure gs_419 = CompileAll
+   end
+   local
+      structure Entity = gs_150
+      structure Longid = gs_112
+      structure MILTerm = gs_252
+      structure TyName = gs_154
+      structure Var = gs_244
+      front/sep/LINK.sig
+   in
+      signature gs_420 = LINK
+   end
+   local
+      structure Controls = gs_80
+      structure Entity = gs_150
+      structure EntityOps = gs_153
+      signature LINK = gs_420
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Option = gs_106
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      structure TransType = gs_261
+      structure TyName = gs_154
+      structure UnitManager = gs_266
+      structure UnitTypes = gs_262
+      structure Var = gs_244
+      front/sep/Link.sml
+   in
+      structure gs_421 = Link
+   end
+   local
+      structure BuildManager = gs_296
+      structure CharVector = gs_25
+      structure ClosConv = gs_376
+      structure Commands = gs_79
+      structure CompileAll = gs_419
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Dups = gs_207
+      structure Entity = gs_150
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure Link = gs_421
+      structure List = gs_4
+      structure Longid = gs_112
+      signature MAKE = gs_208
+      structure MILTy = gs_246
+      structure OS = gs_5
+      structure Opts = gs_329
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure ProcessExports = gs_270
+      structure SepComp = gs_356
+      structure Simplify = gs_293
+      structure SourceManager = gs_204
+      structure String = gs_3
+      structure SyntaxDep = gs_235
+      structure TargetManager = gs_295
+      structure TextIO = gs_84
+      structure Timer = gs_68
+      structure Var = gs_244
+      structure Welcome = gs_95
+      front/proj/Make.sml
+   in
+      structure gs_422 = Make
+   end
+   local
+      structure Opt = gs_271
+      front/opt/TRANSFORMER.sig
+   in
+      signature gs_423 = TRANSFORMER
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure Stats = gs_371
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/DeadArgs.sml
+   in
+      structure gs_424 = DeadArgs
+   end
+   local
+      structure Commands = gs_79
+      structure DepManager = gs_214
+      structure Entity = gs_150
+      structure Env = gs_219
+      structure EnvOps = gs_233
+      structure Id = gs_90
+      structure List = gs_4
+      structure Longid = gs_112
+      structure OS = gs_5
+      structure PrintManager = gs_86
+      structure SepCompEnv = gs_268
+      structure SourceManager = gs_204
+      structure String = gs_3
+      structure Symbol = gs_53
+      structure TopEnv = gs_234
+      structure UnitManager = gs_266
+      structure UnitTypes = gs_262
+      front/proj/TypeCommand.sml
+   in
+      structure gs_425 = TypeCommand
+   end
+   local
+      structure Constants = gs_131
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/mil/MILPath.sml
+   in
+      structure gs_426 = MILPath
+   end
+   local
+      structure MILPath = gs_426
+      front/mil/MILPATHOPS.sig
+   in
+      signature gs_427 = MILPATHOPS
+   end
+   local
+      structure CMap = gs_284
+      structure Constants = gs_131
+      structure Debug = gs_85
+      structure Eq = gs_146
+      structure Int = gs_16
+      structure IntMap = gs_136
+      signature MILPATHOPS = gs_427
+      structure MILPath = gs_426
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Pretty = gs_77
+      structure Var = gs_244
+      front/mil/MILPathOps.sml
+   in
+      structure gs_428 = MILPathOps
+   end
+   local
+      structure MILPath = gs_426
+      structure MILPathOps = gs_428
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/scope/ScopeTypes.sml
+   in
+      structure gs_429 = ScopeTypes
+   end
+   local
+      structure Opt = gs_271
+      structure ScopeTypes = gs_429
+      front/scope/SCOPECHANGE.sig
+   in
+      signature gs_430 = SCOPECHANGE
+   end
+   local
+      structure Census = gs_282
+      structure List = gs_4
+      structure MILPath = gs_426
+      structure MILPathOps = gs_428
+      structure MILTerm = gs_252
+      structure Option = gs_106
+      structure PrintManager = gs_86
+      signature SCOPECHANGE = gs_430
+      structure ScopeTypes = gs_429
+      structure Var = gs_244
+      front/scope/ScopeChange.sml
+   in
+      structure gs_431 = ScopeChange
+   end
+   local
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure ScopeTypes = gs_429
+      structure Var = gs_244
+      front/scope/SCOPECALC.sig
+   in
+      signature gs_432 = SCOPECALC
+   end
+   local
+      structure Controls = gs_80
+      structure MILPathOps = gs_428
+      structure MILTerm = gs_252
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      structure ScopeTypes = gs_429
+      structure Var = gs_244
+      front/scope/ScopePretty.sml
+   in
+      structure gs_433 = ScopePretty
+   end
+   local
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure List = gs_4
+      structure MILPath = gs_426
+      structure MILPathOps = gs_428
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure Option = gs_106
+      structure PrintManager = gs_86
+      signature SCOPECALC = gs_432
+      structure ScopePretty = gs_433
+      structure ScopeTypes = gs_429
+      structure Var = gs_244
+      front/scope/EscapeCalc.sml
+   in
+      structure gs_434 = EscapeCalc
+   end
+   local
+      structure EscapeCalc = gs_434
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure ScopeChange = gs_431
+      signature TRANSFORMER = gs_423
+      front/scope/FunScope.sml
+   in
+      structure gs_435 = FunScope
+   end
+   local
+      structure MILPath = gs_426
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure Var = gs_244
+      front/scope/ScopeEnv.sml
+   in
+      structure gs_436 = ScopeEnv
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure Int = gs_16
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILPath = gs_426
+      structure MILPathOps = gs_428
+      structure MILTerm = gs_252
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure PrintManager = gs_86
+      signature SCOPECALC = gs_432
+      structure ScopeEnv = gs_436
+      structure ScopePretty = gs_433
+      structure ScopeTypes = gs_429
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/scope/ScopeCalc.sml
+   in
+      structure gs_437 = ScopeCalc
+   end
+   local
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure ScopeCalc = gs_437
+      structure ScopeChange = gs_431
+      signature TRANSFORMER = gs_423
+      front/scope/FloatHoist.sml
+   in
+      structure gs_438 = FloatHoist
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Int = gs_16
+      structure IntMap = gs_136
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure Pretty = gs_77
+      structure PrintManager = gs_86
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/Monomorphise.sml
+   in
+      structure gs_439 = Monomorphise
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/Inline.sml
+   in
+      structure gs_440 = Inline
+   end
+   local
+      structure MILTy = gs_246
+      front/opt/FLATTENTYPES.sig
+   in
+      signature gs_441 = FLATTENTYPES
+   end
+   local
+      structure Debug = gs_85
+      signature FLATTENTYPES = gs_441
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      front/opt/FlattenTypes.sml
+   in
+      structure gs_442 = FlattenTypes
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Effect = gs_242
+      structure FlattenTypes = gs_442
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/Flatten.sml
+   in
+      structure gs_443 = Flatten
+   end
+   local
+      structure Census = gs_282
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Debug = gs_85
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure ListPair = gs_144
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure RTInt = gs_37
+      structure RuntimeNames = gs_91
+      structure Symbol = gs_53
+      structure Syntax = gs_57
+      signature TRANSFORMER = gs_423
+      structure TyNames = gs_160
+      structure Var = gs_244
+      front/opt/Equality.sml
+   in
+      structure gs_444 = Equality
+   end
+   local
+      structure Controls = gs_80
+      structure MILTy = gs_246
+      front/opt/DEUNITTYPES.sig
+   in
+      signature gs_445 = DEUNITTYPES
+   end
+   local
+      structure Controls = gs_80
+      signature DEUNITTYPES = gs_445
+      structure Debug = gs_85
+      structure MILTy = gs_246
+      front/opt/DeunitTypes.sml
+   in
+      structure gs_446 = DeunitTypes
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure DeunitTypes = gs_446
+      structure Effect = gs_242
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure List = gs_4
+      structure ListPair = gs_144
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTys = gs_258
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/Deunit.sml
+   in
+      structure gs_447 = Deunit
+   end
+   local
+      structure Census = gs_282
+      structure Constants = gs_131
+      structure Controls = gs_80
+      structure Effect = gs_242
+      structure Ext = gs_250
+      structure Id = gs_90
+      structure Int32 = gs_19
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure MILTyRep = gs_277
+      structure MILTys = gs_258
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure QuickSort = gs_89
+      structure RTInt = gs_37
+      structure Symbol = gs_53
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/Case.sml
+   in
+      structure gs_448 = Case
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      signature TRANSFORMER = gs_423
+      structure Var = gs_244
+      front/opt/TailRec.sml
+   in
+      structure gs_449 = TailRec
+   end
+   local
+      structure Census = gs_282
+      structure Controls = gs_80
+      structure Effect = gs_242
+      structure FunScope = gs_435
+      structure Gen = gs_98
+      structure Id = gs_90
+      structure Inline = gs_440
+      structure List = gs_4
+      structure ListOps = gs_149
+      structure MILPretty = gs_283
+      structure MILTerm = gs_252
+      structure MILTermOps = gs_259
+      structure MILTy = gs_246
+      structure Opt = gs_271
+      structure Option = gs_106
+      structure Opts = gs_329
+      structure PrintManager = gs_86
+      structure Symbol = gs_53
+      structure Var = gs_244
+      front/opt/Arity.sml
+   in
+      structure gs_450 = Arity
+   end
+   local
+      structure Arity = gs_450
+      structure Case = gs_448
+      structure CommandSyntax = gs_58
+      structure Commands = gs_79
+      structure DeadArgs = gs_424
+      structure Deunit = gs_447
+      structure Equality = gs_444
+      structure ErrorManager = gs_103
+      structure Flatten = gs_443
+      structure FloatHoist = gs_438
+      structure FunScope = gs_435
+      structure Inline = gs_440
+      structure InterpretCommand = gs_105
+      structure Interrupt = gs_88
+      structure List = gs_4
+      structure Make = gs_422
+      structure Monomorphise = gs_439
+      structure OS = gs_5
+      structure PackageManager = gs_167
+      structure ParseCommand = gs_67
+      structure Path = gs_205
+      structure PathConv = gs_2
+      structure PrintManager = gs_86
+      structure RuntimeEnv = gs_93
+      structure RuntimeNames = gs_91
+      structure SMLofNJ = gs_0
+      structure Script = gs_104
+      structure SourceManager = gs_204
+      structure String = gs_3
+      signature TOPLEVEL = gs_6
+      structure TailRec = gs_449
+      structure TextIO = gs_84
+      structure TypeCommand = gs_425
+      structure Welcome = gs_95
+      front/interact/TopLevel.sml
+   in
+      structure gs_451 = TopLevel
+   end
+in
+   structure TopLevel = gs_451
+end
+end

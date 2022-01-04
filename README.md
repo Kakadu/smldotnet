@@ -1,3 +1,22 @@
+Trying to compile SML.NET with Mlton
+====================================
+
+Patch compilation manager to a new one
+
+    sml @SMLload=/usr/share/doc/mlton/cm2mlb/cm2mlb src/sources.cm > src/sources.mlb
+
+Start compilation:
+
+    $ mlton sources.mlb
+    Error: sources.mlb 20.24.
+      Undefined structure SMLofNJ.
+    compilation aborted: elaborate reported errors
+
+
+
+
+
+
 SML.NET
 =======
 
@@ -119,4 +138,3 @@ even by  other SML.NET  programs: the  module must
 be  either  linked  into  the  client  program  at
 compile-time  or   use  only  CLR  types   at  its
 interface.
-
